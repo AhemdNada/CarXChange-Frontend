@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Valuation | CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="font-['Inter'] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-x-hidden">
+    <div class="min-h-screen">
+
+        <!-- Start navbar -->
+        <div class="bg-white shadow-md w-full sticky top-0 z-50" data-aos="fade-down" data-aos-duration="900">
+            <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-gray-700/80 sticky top-0 z-50">
+                <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16 items-center">
+                        <!-- Logo -->
+                        <div class="text-xl font-bold text-gray-300" data-aos="fade-right">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </div>
+    
+                        <!-- Mobile menu button -->
+                        <div class="flex items-center md:hidden" data-aos="fade-left">
+                            <button id="mobile-menu-button" class="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <!-- Navigation Desktop  -->
+                        <div class="hidden md:flex space-x-6" data-aos="fade-down">
+                            <a href="./index.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                            </a>
+                            <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                            </a>
+                            <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                            </a>
+                            <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                            </a>
+                        </div>
+    
+                        <!-- Sign In Desktop -->
+                        <a href="./login.html"
+                        class="hidden md:inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-md text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group"
+                        data-aos="zoom-in">
+                        <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        Sign In
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu  -->
+                <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-gray-800/95 backdrop-blur-sm">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="./index.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                        </a>
+                        <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                        </a>
+                        <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                        </a>
+                        <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                        </a>
+                        <a href="./login.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group">
+                        <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 "></i>
+                        Sign In
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--End navbar -->
+
+        <!-- Hero Section -->
+        <section class="pt-20 pb-16 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900/20 to-blue-900/20"></div>
+            <div class="container mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="inline-flex items-center gap-3 bg-gray-800/50 px-6 py-2 rounded-full border border-gray-700/50 mb-8" data-aos="zoom-in">
+                        <span class="text-green-400">✦</span>
+                        <span class="text-sm uppercase tracking-widest text-gray-300 font-semibold">AI-Powered Technology</span>
+                        <span class="text-blue-400">✦</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-aos="fade-up">
+                        Instant <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Valuation</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8" data-aos="fade-up">
+                        Get an accurate, real-time valuation of your vehicle in seconds using our advanced AI algorithms. 
+                        Our system analyzes thousands of data points to provide you with the most precise market value.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up">
+                            <div class="text-2xl font-bold text-green-400 counterinstantvaluation" data-target-counter-instantvaluation="30">0</div>
+                            <div class="text-sm text-gray-400">Average Time</div>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up">
+                            <div class="text-2xl font-bold text-blue-400 counterinstantvaluation" data-target-counter-instantvaluation="95">0</div>
+                            <div class="text-sm text-gray-400">Accuracy Rate</div>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up">
+                            <div class="text-2xl font-bold text-orange-400 counterinstantvaluation" data-target-counter-instantvaluation="50">0</div>
+                            <div class="text-sm text-gray-400">Vehicles Valued</div>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up">
+                            <div class="text-2xl font-bold text-purple-400 counterinstantvaluation" data-target-counter-instantvaluation="24">0</div>
+                            <div class="text-sm text-gray-400">Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valuation Form Section -->
+        <section class="py-16" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gray-800/40 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 shadow-2xl" data-aos="zoom-in">
+                        <div class="text-center mb-8" data-aos="fade-up">
+                            <h2 class="text-3xl font-bold text-white mb-4">Get Your Vehicle's Value</h2>
+                            <p class="text-gray-400">Fill in the details below for an instant, accurate valuation</p>
+                        </div>
+
+                        <form class="space-y-6" data-aos="fade-up">
+                            <!-- Basic Information -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Make</label>
+                                    <select id="Make" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                        <option value="" class="bg-gray-800">Select Brand</option>
+                                        
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Model</label>
+                                    <select id="Model" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                        <option value="" class="bg-gray-800">Select Model</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Year</label>
+                                    <select id="year" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                        <option value="" class="bg-gray-800">Select Year</option>
+                                        
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Mileage</label>
+                                    <input type="number" placeholder="e.g., 25,000" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100 placeholder-gray-500">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Condition</label>
+                                    <select class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                        <option>Select Condition</option>
+                                        <option>New</option>
+                                        <option>Used</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Transmission</label>
+                                    <select class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                        <option>Select Transmission</option>
+                                        <option>Automatic</option>
+                                        <option>Manual</option>
+                                        <option>Semi-Automatic</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-sm font-medium mb-2">Fuel Type</label>
+                                    <select class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                        <option>Select Fuel Type</option>
+                                        <option>Gasoline</option>
+                                        <option>Diesel</option>
+                                        <option>Electric</option>
+                                        <option>Hybrid</option>
+                                        <option>Plug-in Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Additional Features -->
+                            <div data-aos="fade-up">
+                                <label class="block text-gray-300 text-sm font-medium mb-4">Additional Features</label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <label class="flex items-center space-x-3 cursor-pointer" data-aos="fade-up">
+                                        <input type="checkbox" class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 rounded focus:ring-green-500">
+                                        <span class="text-gray-300 text-sm">Leather Seats</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer" data-aos="fade-up">
+                                        <input type="checkbox" class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 rounded focus:ring-green-500">
+                                        <span class="text-gray-300 text-sm">Navigation</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer" data-aos="fade-up">
+                                        <input type="checkbox" class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 rounded focus:ring-green-500">
+                                        <span class="text-gray-300 text-sm">Sunroof</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer" data-aos="fade-up">
+                                        <input type="checkbox" class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 rounded focus:ring-green-500">
+                                        <span class="text-gray-300 text-sm">Premium Audio</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center pt-6" data-aos="zoom-in">
+                                <button type="submit" class="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-green-900/40 transform hover:scale-105">
+                                    <i class="fa-solid fa-calculator mr-2"></i>
+                                    Get Instant Valuation
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced How It Works Section -->
+        <section class="py-16 bg-gray-800/20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">How Our AI Valuation Works</h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-aos="fade-up">Advanced algorithms analyze multiple data sources for the most accurate pricing in the market</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-green-500/20" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in">
+                            <i class="fa-solid fa-database text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300" data-aos="fade-up">Data Analysis</h3>
+                        <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up">Our AI analyzes millions of market transactions, historical data, and current trends with unmatched precision</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up">
+                            <span class="inline-block bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">15+ Data Sources</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-blue-500/20" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in">
+                            <i class="fa-solid fa-brain text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300" data-aos="fade-up">Machine Learning</h3>
+                        <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up">Advanced ML models consider 50+ factors including location, seasonality, and market demand</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up">
+                            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs px-3 py-1 rounded-full">Predictive Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-orange-500/20" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in">
+                            <i class="fa-solid fa-chart-line text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up">Real-time Updates</h3>
+                        <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up">Valuations update continuously based on the latest market conditions and inventory changes</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up">
+                            <span class="inline-block bg-orange-500/10 text-orange-400 text-xs px-3 py-1 rounded-full">Live Adjustments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Market Insights Section -->
+        <section class="py-16 bg-gray-800/10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">Market Insights</h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-aos="fade-up">Stay informed with current market trends and valuation insights updated daily</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Insight 1 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-green-500/20" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in">
+                                <i class="fa-solid fa-arrow-up text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-green-400 transition-colors duration-300">Luxury Segment</h3>
+                                <p class="text-green-400 text-sm group-hover:text-green-300 transition-colors duration-300">+12% this quarter</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up">Luxury vehicles are experiencing strong demand with premium pricing trends across all categories.</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up">
+                            <span class="inline-block bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">Premium Trend</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Insight 2 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-blue-500/20" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in">
+                                <i class="fa-solid fa-bolt text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300">Electric Vehicles</h3>
+                                <p class="text-blue-400 text-sm group-hover:text-blue-300 transition-colors duration-300">+25% this quarter</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up">EV market continues rapid growth with increasing consumer adoption and government incentives.</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up">
+                            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs px-3 py-1 rounded-full">High Growth</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Insight 3 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-orange-500/20" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in">
+                                <i class="fa-solid fa-car text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-300">Sports Cars</h3>
+                                <p class="text-orange-400 text-sm group-hover:text-orange-300 transition-colors duration-300">+8% this quarter</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up">Performance vehicles maintain strong resale values due to limited supply and collector interest.</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up">
+                            <span class="inline-block bg-orange-500/10 text-orange-400 text-xs px-3 py-1 rounded-full">Limited Supply</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start Footer -->
+        <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 border-t border-gray-700/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand Section -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex items-center" data-aos="fade-right">
+                        <h2 class="text-white text-3xl font-bold tracking-tight">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </h2>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up">
+                        Revolutionizing automotive commerce through blockchain-powered transactions and AI-driven valuation solutions.
+                    </p>
+                    <div class="flex space-x-4" data-aos="fade-up">
+                        <a href="#" class="bg-gray-800 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-facebook-f text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-x-twitter text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-instagram text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-linkedin-in text-gray-300 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up">Marketplace</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up"><a href="./premium-inventory.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Premium Inventory
+                        </a></li>
+                        <li data-aos="fade-up"><a href="./sellcar.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Sell Your Vehicle
+                        </a></li>
+                        <li data-aos="fade-up"><a href="./instant-valuation.html" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-100 group-hover:opacity-100 transition-opacity"></span>
+                            Instant Valuation
+                        </a></li>
+                        <li data-aos="fade-up"><a href="./certified-pre-owned.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Certified Pre-Owned
+                        </a></li>
+                       
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up">Resources</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up"><a href="./help-center.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Help Center
+                        </a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up">Insights</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up">
+                        Subscribe to our newsletter for market trends, exclusive offers, and platform updates.
+                    </p>
+                    <form class="mt-2 space-y-3" data-aos="fade-up">
+                        <div data-aos="zoom-in">
+                            <input type="email" placeholder="Your professional email" 
+                                class="w-full bg-gray-800/60 backdrop-blur-sm border border-gray-700/30 
+                                        rounded-lg px-4 py-3 text-gray-300 focus:outline-none 
+                                        focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
+                                        transition-all placeholder-gray-500">
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+                                px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 
+                                shadow-lg hover:shadow-blue-900/40 flex items-center justify-center space-x-2"
+                                data-aos="zoom-in">
+                            <span>Subscribe</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                        <p class="text-xs text-gray-500" data-aos="fade-up">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="mt-16 pt-8 border-t border-gray-800" data-aos="fade-up" data-aos-duration="800">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-sm text-gray-500 mb-4 md:mb-0" data-aos="fade-up">
+                            &copy; 2025 CarXchange Technologies. All rights reserved.
+                        </div>
+                        <div class="flex flex-wrap justify-center space-x-4 md:space-x-6" data-aos="fade-up">
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">Privacy Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">Terms of Service</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">Cookie Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">GDPR</a>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center md:text-left text-xs text-gray-600" data-aos="fade-up">
+                        CarXchange is a registered trademark of CarXchange Technologies Inc. Patent pending.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+
+    
+    <script src="js/navbar.js"></script>
+    <script src="js/instant-valuation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+           AOS.init({
+        duration: 800,
+  easing: 'ease-out-cubic',
+  once: true,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
+  offset: 0,          
+  delay: 0,           
+  startEvent: 'DOMContentLoaded'
+    });
+    </script>
+</body>
+</html> 

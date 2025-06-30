@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars for Sale | CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="font-['Inter'] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-x-hidden">
+    <!-- Start navbar -->
+    <div class="bg-white shadow-md w-full sticky top-0 z-50" data-aos="fade-down" data-aos-duration="900">
+        <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-gray-700/80 sticky top-0 z-50">
+            <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16 items-center">
+                    <!-- Logo -->
+                    <div class="text-xl font-bold text-gray-300" data-aos="fade-right" data-aos-delay="100">
+                        Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="flex items-center md:hidden" data-aos="fade-left" data-aos-delay="200">
+                        <button id="mobile-menu-button" class="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Navigation Desktop  -->
+                    <div class="hidden md:flex space-x-6" data-aos="fade-down" data-aos-delay="300">
+                        <a href="./index.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                            <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                        </a>
+                        <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                            <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                        </a>
+                        <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                            <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                        </a>
+                        <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                            <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                        </a>
+                    </div>
+
+                    <!-- Sign In Desktop -->
+                    <a href="./Login.html"
+                    class="hidden md:inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-md text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                    Sign In
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu  -->
+            <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-gray-800/95 backdrop-blur-sm">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="./index.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                        <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                    </a>
+                    <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                        <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                    </a>
+                    <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                        <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                    </a>
+                    <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                        <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                    </a>
+                    <a href="./Login.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group">
+                    <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 "></i>
+                    Sign In
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--End navbar -->
+
+    <div class=" min-h-screen">
+        <section class="py-16 w-full bg-gradient-to-br from-gray-900/50 via-blue-900/30 to-gray-900/50" data-aos="fade-up" data-aos-duration="1000">
+            <div class="px-6 md:px-12">
+                <!-- Header -->
+                <div class="mb-8 flex flex-col md:flex-row items-center justify-between gap-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="text-3xl font-bold text-gray-100 mb-2">Everything you dream of is her </h2>
+                        <p class="text-lg text-gray-400" data-aos="fade-up" data-aos-delay="200">Own your amazing car now</p>
+                    </div>
+
+                </div>
+
+                <!-- Car Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Car 1 -->
+            <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+            border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+            hover:shadow-2xl hover:shadow-orange-900/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+            <!-- Price Badge -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fa-solid fa-dollar-sign mr-1"></i>575,000
+            </div>
+
+            <!-- Image Container -->
+            <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://www.contactcars.com/_next/image?url=https%3A%2F%2Fcontactcars.fra1.cdn.digitaloceanspaces.com%2Fcontactcars-production%2FImages%2FSmall%2FUsedCars%2Fe02b3f40-fa89-4fad-8039-cc79f60904c6.jpeg&w=3840&q=75" alt="Porsche 911 GT3 2025" 
+                    class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                    group-hover:scale-105">
+            </div>
+
+            <!-- Details Container -->
+            <div class="p-4 sm:p-6 relative z-20">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                    group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="600">
+                    Porsche 911 GT3 2025
+            </h3>
+            
+            <!-- Specifications Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]" data-aos="fade-up" data-aos-delay="700">
+                <!-- Condition -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-500 border-2 border-gray-300 
+                            shadow-md mb-2"></div>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Gray</span>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <a href="viewdetails-Porsche 911 GT3 2025.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                    bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                    hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                    shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base" data-aos="zoom-in" data-aos-delay="1100">
+                <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                <span class="font-semibold">Full Specs</span>
+                <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                        transition-transform duration-300"></i>
+            </a>
+            </div>
+            </div>
+
+            <!-- Car 2 - BMW M4 Competition -->
+            <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+            border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+            hover:shadow-2xl hover:shadow-orange-900/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+            <!-- Price Badge -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="500">
+            <i class="fa-solid fa-dollar-sign mr-1"></i>89,900
+            </div>
+
+            <!-- Image Container -->
+            <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in" data-aos-delay="600">
+            <img src="https://www.mclarenscottsdale.com/imagetag/1289/main/l/Used-2024-BMW-M4-Competition-xDrive-1727128219.jpg" alt="BMW M4 Competition 2024" 
+                    class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                    group-hover:scale-105">
+            </div>
+
+            <!-- Details Container -->
+            <div class="p-4 sm:p-6 relative z-20">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                    group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="700">
+                    BMW M4 Competition 2024
+            </h3>
+            
+            <!-- Specifications Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]" data-aos="fade-up" data-aos-delay="800">
+                <!-- Condition -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Used</span>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-green-600 border-2 border-green-300 
+                            shadow-md mb-2"></div>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Green</span>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <a href="viewdetails-BMW M4 Competition 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                    bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                    hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                    shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base" data-aos="zoom-in" data-aos-delay="1200">
+                <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                <span class="font-semibold">Full Specs</span>
+                <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                        transition-transform duration-300"></i>
+            </a>
+            </div>
+            </div>
+
+            <!-- Car 3 - Mercedes-Benz S-Class -->
+            <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+            border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+            hover:shadow-2xl hover:shadow-orange-900/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+            <!-- Price Badge -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="600">
+            <i class="fa-solid fa-dollar-sign mr-1"></i>125,000
+            </div>
+
+            <!-- Image Container -->
+            <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in" data-aos-delay="700">
+            <img src="https://media.ed.edmunds-media.com/mercedes-benz/s-class/2024/oem/2024_mercedes-benz_s-class_sedan_amg-s-63-e-performance_fq_oem_16_1280x855.jpg" alt="Mercedes-Benz S-Class 2024" 
+                    class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                    group-hover:scale-105">
+            </div>
+
+            <!-- Details Container -->
+            <div class="p-4 sm:p-6 relative z-20">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                    group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="800">
+                    Mercedes-Benz S-Class 2024
+            </h3>
+            
+            <!-- Specifications Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]" data-aos="fade-up" data-aos-delay="900">
+                <!-- Condition -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-black border-2 border-gray-300 
+                            shadow-md mb-2"></div>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Black</span>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <a href="viewdetails-Mercedes-Benz S-Class 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                    bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                    hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                    shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base" data-aos="zoom-in" data-aos-delay="1300">
+                <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                <span class="font-semibold">Full Specs</span>
+                <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                        transition-transform duration-300"></i>
+            </a>
+            </div>
+            </div>
+
+            <!-- Car 4 - Tesla Model S Plaid -->
+            <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+            border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+            hover:shadow-2xl hover:shadow-orange-900/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+            <!-- Price Badge -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="700">
+            <i class="fa-solid fa-dollar-sign mr-1"></i>89,990
+            </div>
+
+            <!-- Image Container -->
+            <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in" data-aos-delay="800">
+            <img src="https://topelectricsuv.com/wp-content/uploads/2024/02/2024-Tesla-Model-S-white-front-three-quarter.jpg" alt="Tesla Model S Plaid 2024" 
+                    class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                    group-hover:scale-105">
+            </div>
+
+            <!-- Details Container -->
+            <div class="p-4 sm:p-6 relative z-20">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                    group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="900">
+                    Tesla Model S Plaid 2024
+            </h3>
+            
+            <!-- Specifications Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]" data-aos="fade-up" data-aos-delay="1000">
+                <!-- Condition -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white border-2 border-gray-300 
+                            shadow-md mb-2"></div>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">White</span>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1300">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Electric</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <a href="viewdetails-Tesla Model S Plaid 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                    bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                    hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                    shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base" data-aos="zoom-in" data-aos-delay="1400">
+                <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                <span class="font-semibold">Full Specs</span>
+                <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                        transition-transform duration-300"></i>
+            </a>
+            </div>
+            </div>
+
+            <!-- Car 5 - Range Rover Sport -->
+            <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+            border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+            hover:shadow-2xl hover:shadow-orange-900/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+            <!-- Price Badge -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="800">
+            <i class="fa-solid fa-dollar-sign mr-1"></i>95,000
+            </div>
+
+            <!-- Image Container -->
+            <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in" data-aos-delay="900">
+            <img src="https://vehicle-images.dealerinspire.com/6f6f-18003960/SAL1Z9F98RA407195/77b9ff354d68dc19ee36f1e93651fda1.jpg" alt="Range Rover Sport 2024" 
+                    class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                    group-hover:scale-105">
+            </div>
+
+            <!-- Details Container -->
+            <div class="p-4 sm:p-6 relative z-20">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                    group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1000">
+                    Range Rover Sport 2024
+            </h3>
+            
+            <!-- Specifications Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]" data-aos="fade-up" data-aos-delay="1100">
+                <!-- Condition -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1300">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-800 border-2 border-gray-300 
+                            shadow-md mb-2"></div>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Dark</span>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1400">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <a href="viewdetails-Range Rover Sport 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                    bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                    hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                    shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base" data-aos="zoom-in" data-aos-delay="1500">
+                <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                <span class="font-semibold">Full Specs</span>
+                <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                        transition-transform duration-300"></i>
+            </a>
+            </div>
+            </div>
+
+            <!-- Car 6 - Ferrari 296 GTB -->
+            <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+            border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+            hover:shadow-2xl hover:shadow-orange-900/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+            <!-- Price Badge -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="900">
+            <i class="fa-solid fa-dollar-sign mr-1"></i>322,986
+            </div>
+
+            <!-- Image Container -->
+            <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in" data-aos-delay="1000">
+            <img src="https://www.amarisupercars.com/blobs/stock/1241491/images/24bf218a-3453-4d0f-9ae9-41e1b079e6fc.jpg?width=1500&height=1000" alt="Ferrari 296 GTB 2024" 
+                    class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                    group-hover:scale-105">
+            </div>
+
+            <!-- Details Container -->
+            <div class="p-4 sm:p-6 relative z-20">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                    group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1100">
+                    Ferrari 296 GTB 2024
+            </h3>
+            
+            <!-- Specifications Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]" data-aos="fade-up" data-aos-delay="1200">
+                <!-- Condition -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1300">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1400">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-red-600 border-2 border-red-300 
+                            shadow-md mb-2"></div>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Red</span>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                    transition-all duration-300 border border-gray-600/50 flex items-center 
+                    justify-center flex-col aspect-square min-h-[100px]" data-aos="zoom-in" data-aos-delay="1500">
+                    <div class="flex flex-col items-center justify-center flex-1">
+                        <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                        <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                        <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <a href="viewdetails-Ferrari 296 GTB 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                    bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                    hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                    shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base" data-aos="zoom-in" data-aos-delay="1600">
+                <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                <span class="font-semibold">Full Specs</span>
+                <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                        transition-transform duration-300"></i>
+            </a>
+            </div>
+            </div>
+
+            </div>
+            </div>
+        </section>
+
+    </div>
+        
+
+        <!-- Start Footer -->
+        <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 border-t border-gray-700/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand Section -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="flex items-center" data-aos="fade-right" data-aos-delay="200">
+                        <h2 class="text-white text-3xl font-bold tracking-tight">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </h2>
+                        
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+                        Revolutionizing automotive commerce through blockchain-powered transactions and AI-driven valuation solutions.
+                    </p>
+                    <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#" class="bg-gray-800 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fa-brands fa-facebook-f text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="600">
+                            <i class="fa-brands fa-x-twitter text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="700">
+                            <i class="fa-brands fa-instagram text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="800">
+                            <i class="fa-brands fa-linkedin-in text-gray-300 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="300">Marketplace</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up" data-aos-delay="400"><a href="premium-inventory.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Premium Inventory
+                        </a></li>
+                        <li data-aos="fade-up" data-aos-delay="500"><a href="sellcar.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Sell Your Vehicle
+                        </a></li>
+                        <li data-aos="fade-up" data-aos-delay="600"><a href="instant-valuation.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Instant Valuation
+                        </a></li>
+                        <li data-aos="fade-up" data-aos-delay="700"><a href="certified-pre-owned.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Certified Pre-Owned
+                        </a></li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="400">Resources</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up" data-aos-delay="500"><a href="help-center.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Help Center
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="500">Insights</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up" data-aos-delay="600">
+                        Subscribe to our newsletter for market trends, exclusive offers, and platform updates.
+                    </p>
+                    <form class="mt-2 space-y-3" data-aos="fade-up" data-aos-delay="700">
+                        <div data-aos="zoom-in" data-aos-delay="800">
+                            <input type="email" placeholder="Your professional email" 
+                                class="w-full bg-gray-800/60 backdrop-blur-sm border border-gray-700/30 
+                                        rounded-lg px-4 py-3 text-gray-300 focus:outline-none 
+                                        focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
+                                        transition-all placeholder-gray-500">
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+                                px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 
+                                shadow-lg hover:shadow-blue-900/40 flex items-center justify-center space-x-2"
+                                data-aos="zoom-in" data-aos-delay="900">
+                            <span>Subscribe</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                        <p class="text-xs text-gray-500" data-aos="fade-up" data-aos-delay="1000">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="mt-16 pt-8 border-t border-gray-800" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-sm text-gray-500 mb-4 md:mb-0" data-aos="fade-up" data-aos-delay="600">
+                            &copy; 2025 CarXchange Technologies. All rights reserved.
+                        </div>
+                        <div class="flex flex-wrap justify-center space-x-4 md:space-x-6" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="800">Privacy Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="900">Terms of Service</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="1000">Cookie Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="1100">GDPR</a>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center md:text-left text-xs text-gray-600" data-aos="fade-up" data-aos-delay="1200">
+                        CarXchange is a registered trademark of CarXchange Technologies Inc. Patent pending.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <script src="js/navbar.js"></script>
+        <script>
+               AOS.init({
+        duration: 800,
+  easing: 'ease-out-cubic',
+  once: true,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
+  offset: 0,          
+  delay: 0,           
+  startEvent: 'DOMContentLoaded'
+    });
+        </script>
+</body>

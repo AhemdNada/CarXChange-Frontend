@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car | CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/sellcar.css">
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="font-['Inter'] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-x-hidden">
+        <!-- Start Navbar-->
+        <div class="bg-white shadow-md w-full sticky top-0 z-50" data-aos="fade-down" data-aos-duration="900">
+            <!-- Start navbar -->
+           <div class="bg-white shadow-md w-full sticky top-0 z-50">
+               <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-gray-700/80 sticky top-0 z-50">
+                   <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                       <div class="flex justify-between h-16 items-center">
+                           <!-- Logo -->
+                           <div class="text-xl font-bold text-gray-300" data-aos="fade-right" data-aos-delay="100">
+                               Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                           </div>
+       
+                           <!-- Mobile menu button -->
+                           <div class="flex items-center md:hidden" data-aos="fade-left" data-aos-delay="200">
+                               <button id="mobile-menu-button" class="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                   </svg>
+                               </button>
+                           </div>
+       
+                           <!-- Navigation Links (Desktop) -->
+                           <div class="hidden md:flex space-x-6" data-aos="fade-down" data-aos-delay="300">
+                               <a href="./index.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                   <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                               </a>
+                               <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                   <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                               </a>
+                               <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                   <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                               </a>
+                               <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                   <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                               </a>
+                           </div>
+       
+                           <!-- Sign In Button (Desktop) -->
+                           <a href="./Login.html"
+                           class="hidden md:inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-md text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group"
+                           data-aos="zoom-in" data-aos-delay="400">
+                           <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                           Sign In
+                           </a>
+   
+   
+   
+   
+                       </div>
+                   </div>
+       
+                   <!-- Mobile Menu (Hidden by default) -->
+                   <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-gray-800/95 backdrop-blur-sm">
+                       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                           <a href="./index.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                               <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                           </a>
+                           <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                               <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                           </a>
+                           <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                               <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                           </a>
+                           <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                               <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                           </a>
+                           <a href="./Login.html"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group">
+                           <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 "></i>
+                           Sign In
+                           </a>
+   
+   
+   
+                       </div>
+                   </div>
+               </nav>
+           </div>
+           <!--End navbar -->
+           
+       </div>
+   <!-- End Navbar-->
+    <!-- Main Content -->
+    <main class=" mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Start header in top -->
+        <header class="mb-12 text-center animate-fade-in" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4" data-aos="fade-up" data-aos-delay="100">
+                Sell Your Car 
+                <span class="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                    Effortlessly
+                </span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Connect with millions of serious buyers through our premium marketplace
+            </p>
+            <div class="mt-6 flex justify-center items-center space-x-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-1 w-12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-80"></div>
+                <div class="h-1 w-12 bg-gradient-to-r from-orange-500 to-orange-300 rounded-full opacity-80"></div>
+                <div class="h-1 w-12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-80"></div>
+            </div>
+        </header>
+        <!-- End header in top -->
+        <!-- Form Container -->
+        <form id="sellCarForm" class="bg-gray-800 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <!-- Start Image Section -->
+            <section class="p-8 border-b border-gray-700" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-100 mb-6 flex items-center" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-camera-retro mr-3 text-blue-400"></i>Vehicle Photos
+                        <span class="ml-auto text-sm font-normal text-gray-400">(3-12 photos)</span>
+                    </h2>
+                    
+                    <!-- Upload Area -->
+                    <div class="group relative border-2 border-dashed border-gray-600 rounded-2xl p-8 text-center transition-all duration-200 hover:border-blue-400 hover:bg-blue-900/20" data-aos="zoom-in" data-aos-delay="700">
+                        <label class="cursor-pointer">
+                            <div class="space-y-4">
+                                <div class="mx-auto w-16 h-16 bg-blue-900/30 rounded-full flex items-center justify-center text-blue-400 group-hover:text-blue-300 transition-colors backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="800">
+                                    <i class="fas fa-cloud-upload-alt text-3xl"></i>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="900">
+                                    <p class="text-gray-300 font-medium">
+                                        <span class="text-blue-400 group-hover:text-blue-300 transition-colors">Click to upload</span></p>
+                                    <p class="text-sm text-gray-400 mt-1">High-quality photos increase sale chances</p>
+                                </div>
+                            </div>
+                            <input id="imageInput" type="file" accept="image/*" multiple class="hidden"  />
+                        </label>
+                    </div>
+        
+                    <!-- Image Previews -->
+                    <div id="preview" class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="1000"></div>
+        
+                    <!-- Image Counter -->
+                    <div id="counter" class="mt-6 flex items-center justify-between" data-aos="fade-up" data-aos-delay="1100">
+                        <div class="text-sm text-gray-400" id="imageCount">
+                            <i class="fas fa-images mr-2"></i><span>0/12 photos selected</span>
+                        </div>
+                        <button type="button" id="resetImages" class="text-red-500 hover:text-red-400 text-sm font-medium transition-colors">
+                            <i class="fas fa-trash mr-2"></i>Clear All
+                        </button>
+                    </div>
+                </div>
+                <!-- Error Message -->
+                <div id="imageError" class="mt-4 text-red-400 bg-red-900/40 border border-red-700 rounded-lg px-4 py-3 text-sm hidden" data-aos="fade-up" data-aos-delay="1200">
+                    <i class="fas fa-exclamation-triangle mr-2"></i><span id="imageErrorText">Error message here</span>
+                </div>
+            </section>
+
+            <!-- Start Vehicle Information Section -->
+            <section class="p-8 border-b border-gray-700 bg-gray-800" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-100 mb-6 flex items-center" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-car mr-3 text-blue-400"></i>Vehicle Information
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Brand -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="800">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-tag mr-2 text-blue-400"></i>Brand
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <select id="brand" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                <option value="" class="bg-gray-800">Select Brand</option>
+                            </select>
+                            <p id="error-message-brand" class="text-red-400 text-sm mt-1 hidden">Please select a brand.</p>
+                        </div>
+
+                        <!-- Model -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="900">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-car-side mr-2 text-blue-400"></i>Model
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <select id="model" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                <option value="" class="bg-gray-800">Select Model</option>
+                            </select>
+                            <p id="error-message-model" class="text-red-400 text-sm mt-1 hidden">Please select a model.</p>
+                        </div>
+
+                        <!-- Condition -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1000">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-clipboard-check mr-2 text-blue-400"></i>Condition
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <select id="condition" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                <option value="" class="bg-gray-800">Select Condition</option>
+                                <option value="new" class="bg-gray-800">New</option>
+                                <option value="used" class="bg-gray-800">Used</option>
+                            </select>
+                            <p id="error-message-condition" class="text-red-400 text-sm mt-1 hidden">Please select a condition.</p>
+                        </div>
+
+                        <!-- Year -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1100">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-blue-400"></i>Year
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <select id="year" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                <option value="" class="bg-gray-800">Select Year</option>
+                            </select>
+                            <p id="error-message-year" class="text-red-400 text-sm mt-1 hidden">Please select a year.</p>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1200">
+                            <label for="location" class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>Location
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <input type="text" id="location" data-validate="english" 
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100"
+                                placeholder="Enter Location Your Car">
+                            <p id="error-message-location" class="text-red-400 text-sm mt-1 hidden">Only English letters and spaces are allowed.</p>
+                        </div>
+
+                        <!-- Safety Feature -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1300">
+                            <label for="safetyFeature" class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-shield-alt mr-2 text-blue-400"></i>Safety Feature
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+
+                            <input id="safetyFeature" name="safetyFeature" data-validate="english" 
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100"
+                                placeholder="Type a safety feature">
+
+                            <p id="error-message-safetyFeature" class="text-red-400 text-sm mt-1 hidden">
+                                Only English letters and spaces are allowed.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- End Vehicle Information Section -->
+
+             <!-- Start Technical Details Section -->
+            <section class="p-8 border-b border-gray-700 bg-gray-800" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-100 mb-6 flex items-center" data-aos="fade-up" data-aos-delay="800">
+                        <i class="fas fa-cogs mr-3 text-blue-400"></i>Technical Details
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Transmission -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="900">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-tachometer-alt mr-2 text-blue-400"></i>Transmission
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <select id="transmission" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                <option value="" class="bg-gray-800">Select Transmission</option>
+                                <option value="automatic" class="bg-gray-800">Automatic</option>
+                                <option value="manual" class="bg-gray-800">Manual</option>
+                            </select>
+                            <p id="error-message-transmission" class="text-red-400 text-sm mt-1 hidden">Please select a transmission type.</p>
+                        </div>
+
+                        <!-- Fuel Type -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1000">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-gas-pump mr-2 text-blue-400"></i>Fuel Type
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <select id="fuel" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-gray-100">
+                                <option value="" class="bg-gray-800">Select Fuel Type</option>
+                                <option value="gasoline" class="bg-gray-800">Gasoline</option>
+                                <option value="diesel" class="bg-gray-800">Diesel</option>
+                                <option value="electric" class="bg-gray-800">Electric</option>
+                                <option value="hybrid" class="bg-gray-800">Hybrid</option>
+                            </select>
+                            <p id="error-message-fuel" class="text-red-400 text-sm mt-1 hidden">Please select a fuel type.</p>
+                        </div>
+
+                        <!-- Mileage -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1100">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-road mr-2 text-blue-400"></i>Mileage
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <div class="relative">
+                                <input type="number" id="mileage" 
+                                    
+                                    class="w-full pl-4 pr-12 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100"
+                                    placeholder="Enter mileage">
+                                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">km</span>
+                            </div>
+                            <p id="error-message-mileage" class="text-red-400 text-sm mt-1 hidden">Please enter the mileage.</p>
+                        </div>
+
+                        <!-- Engine Capacity -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1200">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-cogs text-blue-400 mr-2"></i>
+                                Engine Capacity
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <div class="relative">
+                                <input type="number" id="engine" 
+                                    class="w-full pl-4 pr-12 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100"
+                                    placeholder="Engine capacity">
+                                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">cc</span>
+                            </div>
+                            <p id="error-message-engine" class="text-red-400 text-sm mt-1 hidden">Please enter the engine capacity.</p>
+                        </div>
+
+                        <!-- Seats -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1300">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-chair mr-2 text-blue-400"></i>Seats
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <input type="number" id="seats" 
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100"
+                                placeholder="Number of seats">
+                            <p id="error-message-seats" class="text-red-400 text-sm mt-1 hidden">Please enter the number of seats.</p>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="space-y-2" data-aos="fade-up" data-aos-delay="1400">
+                            <label class="block text-sm font-medium text-gray-300 flex items-center">
+                                <i class="fas fa-dollar-sign mr-2 text-blue-400"></i>Price
+                                <span class="text-red-400 ml-1">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+                                <input type="number" id="price" step="0.01" 
+                                    class="w-full pl-8 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100"
+                                    placeholder="Enter price">
+                            </div>
+                            <p id="error-message-price" class="text-red-400 text-sm mt-1 hidden">Please enter the price.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Technical Details Section -->
+
+            <!-- Start Color Section -->
+            <section class="p-8 bg-gray-800 border-b border-gray-700" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-100 mb-6 flex items-center" data-aos="fade-up" data-aos-delay="900">
+                        <i class="fas fa-palette mr-3 text-blue-400"></i>Available Colors
+                    </h2>
+                    
+                    <!-- Grid of Basic Colors -->
+                    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3" id="colorGrid" data-aos="fade-up" data-aos-delay="1000">
+                    </div>
+
+                    <!-- Color Picker for Custom Colors -->
+                    <div class="mt-4" data-aos="fade-up" data-aos-delay="1100">
+                        <label for="colorPicker" class="block text-gray-300">Choose a custom color:</label>
+                        <input type="color" id="colorPicker" 
+                            class="w-16 h-16 border-2 border-gray-600 rounded-xl mt-2 cursor-pointer">
+                    </div>
+
+                    <input type="hidden" id="selectedColor" name="selectedColor" class="bg-gray-700">
+                    <p id="error-message-selectedColor" class="text-red-400 text-sm mt-1 hidden">Please select a color.</p>
+                </div>
+            </section>
+            <!-- End Color Section -->
+
+            <!-- Start Key Features Section -->
+            <section class="p-8 bg-gray-800 border-b border-gray-700" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-100 mb-6 flex items-center" data-aos="fade-up" data-aos-delay="1000">
+                        <i class="fa-solid fa-star mr-2 text-blue-400"></i>Key Features
+                        <span class="ml-1 text-gray-400 text-sm">(optional)</span>
+                    </h2>
+
+                    <!-- Input fields for Title and Description -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="1100">
+                        <input type="text" id="featureTitle" placeholder="e.g. Electric Range" data-validate="english" data-optional="true"
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100">
+                        <input type="text" id="featureDesc" placeholder="e.g. Approximately 250 miles (402 km) on a full charge" data-validate="english" data-optional="true"
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100">
+                            <p id="error-message-featureTitle" class="text-red-400 text-sm mt-1 hidden">Only English letters and spaces are allowed.</p>
+                            <p id="error-message-featureDesc" class="text-red-400 text-sm mt-1 hidden">Only English letters and spaces are allowed.</p>
+
+                    </div>
+
+
+                    <!-- Add Button -->
+                    <button type="button" id="addFeatureBtn"
+                        class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300"
+                        data-aos="zoom-in" data-aos-delay="1200">
+                        Add Feature
+                    </button>
+                    
+                    
+
+                    <!-- Feature List -->
+                    <ul id="featuresList" class="space-y-2 mt-4 text-gray-300 " data-aos="fade-up" data-aos-delay="1300"></ul>
+                </div>
+            </section>
+            <!-- End Key Features Section -->
+
+            <!-- Start Description Section-->
+            <section class="p-8 bg-gray-800 border-b border-gray-700" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-100 mb-6 flex items-center" data-aos="fade-up" data-aos-delay="1100">
+                        <i class="fa-solid fa-align-left mr-2 text-blue-400"></i>Description
+                        <span class="ml-1 text-gray-400 text-sm">(optional)</span>
+                    </h2>
+                    
+                    <textarea
+                        id="Description" data-optional="true"
+                        placeholder="e.g. The 2020 Tesla Model 3 Standard Range is ...."
+                        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all placeholder-gray-400 text-gray-100 h-40" data-validate="english"
+                        data-aos="fade-up" data-aos-delay="1200"
+                    ></textarea>
+                    <p id="error-message-Description" class="text-red-400 text-sm mt-1 hidden">Only English letters and spaces are allowed.</p>
+
+                </div>
+            </section>
+            <!-- End Description Section-->
+            
+
+
+            <!-- Submit Section -->
+                <div class="p-8 bg-gray-800/50 border-t border-gray-700" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1100">
+                    <div class="max-w-3xl mx-auto flex justify-end">
+                        <button type="submit"
+                                class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-xl font-semibold 
+                                    hover:from-blue-700 hover:to-blue-900 transition-all duration-300 
+                                    shadow-lg hover:shadow-xl hover:-translate-y-0.5
+                                    focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+                                data-aos="zoom-in" data-aos-delay="1200">
+                            <i class="fas fa-paper-plane mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            Publish 
+                        </button>
+                    </div>
+                </div>
+ <!-- Start Footer -->
+ <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 border-t border-gray-700/30">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Brand Section -->
+        <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1300">
+            <div class="flex items-center" data-aos="fade-right" data-aos-delay="1400">
+                <h2 class="text-white text-3xl font-bold tracking-tight">
+                    Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                </h2>
+                
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up" data-aos-delay="1500">
+                Revolutionizing automotive commerce through blockchain-powered transactions and AI-driven valuation solutions.
+            </p>
+            <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="1600">
+                <a href="#" class="bg-gray-800 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="1700">
+                    <i class="fa-brands fa-facebook-f text-gray-300 group-hover:text-white"></i>
+                </a>
+                <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="1800">
+                    <i class="fa-brands fa-x-twitter text-gray-300 group-hover:text-white"></i>
+                </a>
+                <a href="#" class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="1900">
+                    <i class="fa-brands fa-instagram text-gray-300 group-hover:text-white"></i>
+                </a>
+                <a href="#" class="bg-gray-800 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="2000">
+                    <i class="fa-brands fa-linkedin-in text-gray-300 group-hover:text-white"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1400">
+            <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="1500">Marketplace</h3>
+            <ul class="space-y-3">
+                <li data-aos="fade-up" data-aos-delay="1600"><a href="premium-inventory.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                    <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Premium Inventory
+                </a></li>
+                <li data-aos="fade-up" data-aos-delay="1700"><a href="sellcar.html" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center group">
+                    <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-100 group-hover:opacity-100 transition-opacity"></span>
+                    Sell Your Vehicle
+                </a></li>
+                <li data-aos="fade-up" data-aos-delay="1800"><a href="instant-valuation.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                    <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Instant Valuation
+                </a></li>
+                <li data-aos="fade-up" data-aos-delay="1900"><a href="certified-pre-owned.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                    <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Certified Pre-Owned
+                </a></li>
+                
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1500">
+            <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="1600">Resources</h3>
+            <ul class="space-y-3">
+                <li data-aos="fade-up" data-aos-delay="1700"><a href="help-center.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                    <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Help Center
+                </a></li>
+
+            </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1600">
+            <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="1700">Insights</h3>
+            <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up" data-aos-delay="1800">
+                Subscribe to our newsletter for market trends, exclusive offers, and platform updates.
+            </p>
+            <form class="mt-2 space-y-3" data-aos="fade-up" data-aos-delay="1900">
+                <div data-aos="zoom-in" data-aos-delay="2000">
+                    <input type="email" placeholder="Your professional email" data-optional="true"
+                        class="w-full bg-gray-800/60 backdrop-blur-sm border border-gray-700/30 
+                                rounded-lg px-4 py-3 text-gray-300 focus:outline-none 
+                                focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
+                                transition-all placeholder-gray-500">
+                </div>
+                <button class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+                        px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 
+                        shadow-lg hover:shadow-blue-900/40 flex items-center justify-center space-x-2"
+                        data-aos="zoom-in" data-aos-delay="2100">
+                    <span>Subscribe</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+                <p class="text-xs text-gray-500" data-aos="fade-up" data-aos-delay="2200">
+                    We respect your privacy. Unsubscribe at any time.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright & Legal -->
+    <div class="mt-16 pt-8 border-t border-gray-800" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1700">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-500 mb-4 md:mb-0" data-aos="fade-up" data-aos-delay="1800">
+                    &copy; 2025 CarXchange Technologies. All rights reserved.
+                </div>
+                <div class="flex flex-wrap justify-center space-x-4 md:space-x-6" data-aos="fade-up" data-aos-delay="1900">
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="2000">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="2100">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="2200">Cookie Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="2300">GDPR</a>
+                </div>
+            </div>
+            <div class="mt-4 text-center md:text-left text-xs text-gray-600" data-aos="fade-up" data-aos-delay="2400">
+                CarXchange is a registered trademark of CarXchange Technologies Inc. Patent pending.
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+        </form>
+        
+    </main>
+    <script src="js/navbar.js"></script>
+    <script src="js/sellcar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+           AOS.init({
+        duration: 800,
+  easing: 'ease-out-cubic',
+  once: true,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
+  offset: 0,          
+  delay: 0,           
+  startEvent: 'DOMContentLoaded'
+    });
+    </script>
+</body>

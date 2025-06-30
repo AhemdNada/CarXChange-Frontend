@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 h-screen overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="floating-car fixed top-4 right-4 md:top-20 md:right-20 opacity-10 z-0"></div>
+    <!-- Main Container -->
+    <div class="container mx-auto h-full p-4 flex items-center justify-center">
+        <div class="form-container max-w-md w-full h-[600px]">
+            <div class="form-card">
+                <!-- Login Form -->
+                <div class="front bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl p-6 md:p-8 backdrop-blur-lg border border-gray-700">
+                    <div class="text-center mb-8 md:mb-12">
+                        <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-blue-100  mb-4">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">change</span>
+                        </h1>
+                        <p class="text-gray-400 text-sm md:text-base">Welcome back! Log in to explore our latest car deals.
+                        </p>
+                    </div>
+
+                    <form id="loginForm" class="space-y-4 md:space-y-6" >
+                        <div>
+                            <input type="email" id="loginEmail"
+                                   class="input-effect w-full bg-transparent text-white py-3 md:py-4 px-4 border-0 border-b-2 border-gray-600 focus:ring-0 focus:border-blue-500 placeholder-gray-500 text-sm md:text-base"
+                                   placeholder="Email Address" required>
+                            <p class="text-red-400 text-xs md:text-sm mt-1 md:mt-2 hidden" id="loginEmailError">Invalid email format</p>
+                        </div>
+
+                        <div class="relative">
+                            <input type="password" id="loginPassword" 
+                                   class="input-effect w-full bg-transparent text-white py-3 md:py-4 px-4 border-0 border-b-2 border-gray-600 focus:ring-0 focus:border-blue-500 placeholder-gray-500 pr-12 text-sm md:text-base"
+                                   placeholder="Password" required>
+                            <button type="button" class="toggle-password-btn absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-400 p-2" data-target="loginPassword">
+                                 <!-- Eye Open (visible by default) -->
+                                <svg class="eye-open w-5 h-5 md:w-6 md:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 
+                                        9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 
+                                        0-8.268-2.943-9.542-7z" />
+                                </svg>
+
+                                <!-- Eye Closed (hidden by default) -->
+                                <svg class="eye-closed w-5 h-5 md:w-6 md:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7
+                                        a9.961 9.961 0 012.338-4.033M6.23 6.23A9.953 9.953 0 0112 5
+                                        c4.478 0 8.268 2.943 9.542 7a9.956 9.956 0 01-4.271 5.163M3 3l18 18" />
+                                </svg>
+                            </button>
+                            <p class="text-red-400 text-xs md:text-sm mt-1 md:mt-2 hidden" id="loginPasswordError">Password required</p>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 md:py-4 rounded-xl font-semibold text-sm md:text-base hover:shadow-lg hover:shadow-blue-500/30 transition-all">
+                            Login
+                        </button>
+                    </form>
+
+                    <p class="text-center mt-4 md:mt-6 text-gray-400 text-xs md:text-sm">
+                        New here?
+                        <button class="toggle-form-btn text-blue-400 hover:text-cyan-400 transition-colors">
+                            Create Account
+                        </button>
+                    </p>
+                    
+                </div>
+                <!-- Signup Form -->
+                <div class="back bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl p-6 md:p-8 backdrop-blur-lg border border-gray-700">
+                    <div class="text-center mb-8 md:mb-12">
+                        <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text mb-4">
+                            <span class="text-blue-500">Join</span> <span class="text-white">Car</span><span class="text-blue-400">X</span><span class="text-orange-400">change</span>
+
+
+                        </h1>
+                        <p class="text-gray-400 text-sm md:text-base">Start your journey to find your dream car</p>
+                    </div>
+
+                    <form id="signupForm" class="space-y-4 md:space-y-6" >
+                        <div>
+                            <input type="text" id="signupUsername" 
+                                   class="input-effect w-full bg-transparent text-white py-3 md:py-4 px-4 border-0 border-b-2 border-gray-600 focus:ring-0 focus:border-blue-500 placeholder-gray-500 text-sm md:text-base"
+                                   placeholder="Username" required>
+                            <p class="text-red-400 text-xs md:text-sm mt-1 md:mt-2 hidden" id="signupUsernameError">Username required</p>
+                        </div>
+
+                        <div>
+                            <input type="email" id="signupEmail" 
+                                   class="input-effect w-full bg-transparent text-white py-3 md:py-4 px-4 border-0 border-b-2 border-gray-600 focus:ring-0 focus:border-blue-500 placeholder-gray-500 text-sm md:text-base"
+                                   placeholder="Email Address" required>
+                            <p class="text-red-400 text-xs md:text-sm mt-1 md:mt-2 hidden" id="signupEmailError">Invalid email format</p>
+                        </div>
+
+                        <div class="relative">
+                            <input type="password" id="signupPassword" 
+                                   class="input-effect w-full bg-transparent text-white py-3 md:py-4 px-4 border-0 border-b-2 border-gray-600 focus:ring-0 focus:border-blue-500 placeholder-gray-500 pr-12 text-sm md:text-base"
+                                   placeholder="Password" required>
+                            <button type="button" class="toggle-password-btn absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-400 p-2" data-target="signupPassword">
+                                <!-- Eye Open (visible by default) -->
+                                <svg class="eye-open w-5 h-5 md:w-6 md:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 
+                                        9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 
+                                        0-8.268-2.943-9.542-7z" />
+                                </svg>
+
+                                <!-- Eye Closed (hidden by default) -->
+                                <svg class="eye-closed w-5 h-5 md:w-6 md:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7
+                                        a9.961 9.961 0 012.338-4.033M6.23 6.23A9.953 9.953 0 0112 5
+                                        c4.478 0 8.268 2.943 9.542 7a9.956 9.956 0 01-4.271 5.163M3 3l18 18" />
+                                </svg>
+                            </button>
+                            <p class="text-red-400 text-xs md:text-sm mt-1 md:mt-2 hidden" id="signupPasswordError">Min 6 characters</p>
+                        </div>
+
+                        <div class="relative">
+                            <input type="password" id="signupConfirmPassword" 
+                                   class="input-effect w-full bg-transparent text-white py-3 md:py-4 px-4 border-0 border-b-2 border-gray-600 focus:ring-0 focus:border-blue-500 placeholder-gray-500 pr-12 text-sm md:text-base"
+                                   placeholder="Confirm Password" required>
+                            <button type="button" class="toggle-password-btn absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-400 p-2"  data-target="signupConfirmPassword">
+                                <!-- Eye Open (visible by default) -->
+                                <svg class="eye-open w-5 h-5 md:w-6 md:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 
+                                        9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 
+                                        0-8.268-2.943-9.542-7z" />
+                                </svg>
+
+                                <!-- Eye Closed (hidden by default) -->
+                                <svg class="eye-closed w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7
+                                        a9.961 9.961 0 012.338-4.033M6.23 6.23A9.953 9.953 0 0112 5
+                                        c4.478 0 8.268 2.943 9.542 7a9.956 9.956 0 01-4.271 5.163M3 3l18 18" />
+                                </svg>
+                            </button>
+                            <p class="text-red-400 text-xs md:text-sm mt-1 md:mt-2 hidden" id="signupConfirmError">Passwords mismatch</p>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 md:py-4 rounded-xl font-semibold text-sm md:text-base hover:shadow-lg hover:shadow-cyan-500/30 transition-all">
+                            Signup
+                        </button>
+                    </form>
+
+                    <p class="text-center mt-4 md:mt-6 text-gray-400 text-xs md:text-sm">
+                        Already have an account?
+                        <button class="toggle-form-btn text-cyan-400 hover:text-blue-400 transition-colors">
+                            Login Here
+                        </button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+<script src="js/login.js"></script>
+</body>

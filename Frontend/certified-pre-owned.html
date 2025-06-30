@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certified Pre-Owned | CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="font-['Inter'] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-x-hidden">
+    <div class="min-h-screen">
+
+        <!-- Start navbar -->
+        <div class="bg-white shadow-md w-full sticky top-0 z-50" data-aos="fade-down" data-aos-duration="900">
+            <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-gray-700/80 sticky top-0 z-50">
+                <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16 items-center">
+                        <!-- Logo -->
+                        <div class="text-xl font-bold text-gray-300" data-aos="fade-right" data-aos-delay="100">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </div>
+    
+                        <!-- Mobile menu button -->
+                        <div class="flex items-center md:hidden" data-aos="fade-left" data-aos-delay="200">
+                            <button id="mobile-menu-button" class="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <!-- Navigation Desktop  -->
+                        <div class="hidden md:flex space-x-6" data-aos="fade-down" data-aos-delay="300">
+                            <a href="./index.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                            </a>
+                            <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                            </a>
+                            <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                            </a>
+                            <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                            </a>
+                        </div>
+    
+                        <!-- Sign In Desktop -->
+                        <a href="./login.html"
+                        class="hidden md:inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-md text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group"
+                        data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        Sign In
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu  -->
+                <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-gray-800/95 backdrop-blur-sm">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="./index.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                        </a>
+                        <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                        </a>
+                        <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                        </a>
+                        <a href="./index.html#AboutUs" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                        </a>
+                        <a href="./login.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group">
+                        <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 "></i>
+                        Sign In
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--End navbar -->
+
+        <!-- Hero Section -->
+        <section class="pt-20 pb-16 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
+            <div class="container mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="inline-flex items-center gap-3 bg-gray-800/50 px-6 py-2 rounded-full border border-gray-700/50 mb-8" data-aos="zoom-in" data-aos-delay="100">
+                        <span class="text-purple-400">✦</span>
+                        <span class="text-sm uppercase tracking-widest text-gray-300 font-semibold">Quality Assured</span>
+                        <span class="text-blue-400">✦</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                        Certified <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Pre-Owned</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="300">
+                        Discover premium pre-owned vehicles that have undergone rigorous certification processes. 
+                        Each certified vehicle comes with extended warranty, comprehensive inspection, and quality assurance.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="400">
+                            <div class="text-2xl font-bold text-purple-400 countercertifiedpreowned" data-target-counter-certifiedpreowned="200">0</div>
+                            <div class="text-sm text-gray-400">Point Inspection</div>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="500">
+                            <div class="text-2xl font-bold text-blue-400 countercertifiedpreowned" data-target-counter-certifiedpreowned="3">0</div>
+                            <div class="text-sm text-gray-400">Extended Warranty</div>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="600">
+                            <div class="text-2xl font-bold text-green-400 countercertifiedpreowned" data-target-counter-certifiedpreowned="100">0</div>
+                            <div class="text-sm text-gray-400">Certified</div>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm px-6 py-4 rounded-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="700">
+                            <div class="text-2xl font-bold text-orange-400 countercertifiedpreowned" data-target-counter-certifiedpreowned="24">0</div>
+                            <div class="text-sm text-gray-400">Roadside</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Certification Process Section -->
+            <section class="py-16 bg-gray-800/20" data-aos="fade-up" data-aos-duration="1000">
+                <div class="container mx-auto px-4 md:px-8">
+                    <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">Our Certification Process</h2>
+                        <p class="text-gray-400 text-lg max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">Rigorous standards ensure every certified vehicle meets our premium quality requirements</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Step 1 -->
+                        <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-purple-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fa-solid fa-clipboard-check text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="500">Initial Screening</h3>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="600">Comprehensive background check including accident history, maintenance records, and ownership verification</p>
+                            <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="700">
+                                <span class="inline-block bg-purple-500/10 text-purple-400 text-xs px-3 py-1 rounded-full">5-Point Check</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-blue-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fa-solid fa-tools text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="600">Mechanical Inspection</h3>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="700">200+ point inspection covering engine, transmission, electrical systems, and safety components</p>
+                            <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="800">
+                                <span class="inline-block bg-blue-500/10 text-blue-400 text-xs px-3 py-1 rounded-full">Expert Verified</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-green-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-600 to-green-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fa-solid fa-paint-brush text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="700">Cosmetic Restoration</h3>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="800">Professional detailing, paint correction, and interior restoration to like-new condition standards</p>
+                            <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="900">
+                                <span class="inline-block bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">Showroom Ready</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div class="group text-center p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-orange-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                            <div class="w-20 h-20 bg-gradient-to-br from-orange-600 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fa-solid fa-certificate text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="800">Final Certification</h3>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="900">Quality assurance review and certification with extended warranty and 24/7 roadside assistance</p>
+                            <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="1000">
+                                <span class="inline-block bg-orange-500/10 text-orange-400 text-xs px-3 py-1 rounded-full">Guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Certified Vehicles Grid -->
+        <section class="py-16" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">Certified Vehicles</h2>
+                    <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="200">Browse our selection of certified pre-owned vehicles</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Certified Car 1 -->
+                    <div class="group bg-gray-800/40 backdrop-blur-sm rounded-3xl overflow-hidden border border-gray-700/60 hover:border-purple-400/30 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-900/20 hover:-translate-y-2" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="relative h-64 overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                            <img src="https://www.mclarenscottsdale.com/imagetag/1289/13/l/Used-2024-BMW-M4-Competition-xDrive-1727128219.jpg" alt="BMW 3 Series" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                <i class="fa-solid fa-certificate mr-1"></i>Certified
+                            </div>
+                            <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                                89,900
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">BMW M4 Competition 2024</h3>
+                            <p class="text-gray-400 text-sm mb-4">High-performance coupe with aggressive styling and cutting-edge tech</p>
+                        
+                            <div class="grid grid-cols-3 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div class="text-purple-400 font-bold">3.0L</div>
+                                    <div class="text-xs text-gray-500">Twin-Turbo I6</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-purple-400 font-bold">503 hp</div>
+                                    <div class="text-xs text-gray-500">Horsepower</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-purple-400 font-bold">RWD / xDrive</div>
+                                    <div class="text-xs text-gray-500">Drivetrain</div>
+                                </div>
+                            </div>
+                        
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                                <span class="text-green-400 text-sm font-semibold">✓ 0–100 km/h in 3.8s</span>
+                                <span class="text-blue-400 text-sm font-semibold">✓ M Adaptive Suspension</span>
+                            </div>
+                        
+                            <a href="viewdetails-BMW M4 Competition 2024.html" class="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 rounded-xl font-semibold text-center block hover:from-purple-700 hover:to-purple-800 transition-all duration-300">
+                                View Details
+                            </a>
+                        </div>
+                        
+                    </div>
+
+                    
+
+                    
+                </div>
+
+                
+            </div>
+        </section>
+
+        <!-- Enhanced Benefits Section -->
+        <section class="py-16 bg-gray-800/20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">Certified Benefits</h2>
+                    <p class="text-gray-400 text-lg max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">Comprehensive benefits that provide peace of mind and exceptional value</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-purple-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fa-solid fa-shield-halved text-xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="600">Extended Warranty</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="700">3-year comprehensive warranty coverage on all certified vehicles with unlimited mileage</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="800">
+                            <span class="inline-block bg-purple-500/10 text-purple-400 text-xs px-3 py-1 rounded-full">Full Protection</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-blue-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fa-solid fa-car text-xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="700">Roadside Assistance</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="800">24/7 nationwide roadside assistance including towing, lockout service, and jump starts</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="900">
+                            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs px-3 py-1 rounded-full">Always Covered</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-green-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fa-solid fa-clipboard-check text-xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-green-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="800">Quality Assurance</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="900">200+ point inspection performed by master technicians to ensure premium condition</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="1000">
+                            <span class="inline-block bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">Expert Verified</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 4 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-orange-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="700">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="800">
+                                <i class="fa-solid fa-dollar-sign text-xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="900">Better Value</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1000">Save up to 40% compared to new models while enjoying similar features and reliability</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="1100">
+                            <span class="inline-block bg-orange-500/10 text-orange-400 text-xs px-3 py-1 rounded-full">Smart Savings</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 5 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-red-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="900">
+                                <i class="fa-solid fa-history text-xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1000">Complete History</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1100">Full vehicle history report including service records and previous ownership details</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="1200">
+                            <span class="inline-block bg-red-500/10 text-red-400 text-xs px-3 py-1 rounded-full">Transparent</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 6 -->
+                    <div class="group p-6 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-cyan-500/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="900">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="1000">
+                                <i class="fa-solid fa-handshake text-xl text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1100">Peace of Mind</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300" data-aos="fade-up" data-aos-delay="1200">Confidence in your purchase backed by our comprehensive certification guarantee</p>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-aos="fade-up" data-aos-delay="1300">
+                            <span class="inline-block bg-cyan-500/10 text-cyan-400 text-xs px-3 py-1 rounded-full">Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start Footer -->
+        <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 border-t border-gray-700/30" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand Section -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="flex items-center" data-aos="fade-right" data-aos-delay="200">
+                        <h2 class="text-white text-3xl font-bold tracking-tight">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </h2>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+                        Revolutionizing automotive commerce through blockchain-powered transactions and AI-driven valuation solutions.
+                    </p>
+                    <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#" class="bg-gray-800 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fa-brands fa-facebook-f text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="600">
+                            <i class="fa-brands fa-x-twitter text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="700">
+                            <i class="fa-brands fa-instagram text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="800">
+                            <i class="fa-brands fa-linkedin-in text-gray-300 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="300">Marketplace</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up" data-aos-delay="400"><a href="premium-inventory.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Premium Inventory
+                        </a></li>
+                        <li data-aos="fade-up" data-aos-delay="500"><a href="sellcar.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Sell Your Vehicle
+                        </a></li>
+                        <li data-aos="fade-up" data-aos-delay="600"><a href="instant-valuation.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Instant Valuation
+                        </a></li>
+                        <li data-aos="fade-up" data-aos-delay="700"><a href="certified-pre-owned.html" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-100 group-hover:opacity-100 transition-opacity"></span>
+                            Certified Pre-Owned
+                        </a></li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="400">Resources</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up" data-aos-delay="500"><a href="help-center.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Help Center
+                        </a></li>
+ 
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up" data-aos-delay="500">Insights</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up" data-aos-delay="600">
+                        Subscribe to our newsletter for market trends, exclusive offers, and platform updates.
+                    </p>
+                    <form class="mt-2 space-y-3" data-aos="fade-up" data-aos-delay="700">
+                        <div data-aos="zoom-in" data-aos-delay="800">
+                            <input type="email" placeholder="Your professional email" 
+                                class="w-full bg-gray-800/60 backdrop-blur-sm border border-gray-700/30 
+                                        rounded-lg px-4 py-3 text-gray-300 focus:outline-none 
+                                        focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
+                                        transition-all placeholder-gray-500">
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+                                px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 
+                                shadow-lg hover:shadow-blue-900/40 flex items-center justify-center space-x-2"
+                                data-aos="zoom-in" data-aos-delay="900">
+                            <span>Subscribe</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                        <p class="text-xs text-gray-500" data-aos="fade-up" data-aos-delay="1000">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="mt-16 pt-8 border-t border-gray-800" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-sm text-gray-500 mb-4 md:mb-0" data-aos="fade-up" data-aos-delay="600">
+                            &copy; 2025 CarXchange Technologies. All rights reserved.
+                        </div>
+                        <div class="flex flex-wrap justify-center space-x-4 md:space-x-6" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="800">Privacy Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="900">Terms of Service</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="1000">Cookie Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up" data-aos-delay="1100">GDPR</a>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center md:text-left text-xs text-gray-600" data-aos="fade-up" data-aos-delay="1200">
+                        CarXchange is a registered trademark of CarXchange Technologies Inc. Patent pending.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+
+    
+    <script src="js/navbar.js"></script>
+    <script src="js/certified-pre-owned.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+           AOS.init({
+        duration: 800,
+  easing: 'ease-out-cubic',
+  once: true,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
+  offset: 0,          
+  delay: 0,           
+  startEvent: 'DOMContentLoaded'
+    });
+    </script>
+</body>
+</html> 

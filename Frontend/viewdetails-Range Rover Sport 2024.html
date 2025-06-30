@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/viewdetails.css">
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="font-['Inter'] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-gray-100">
+    <!-- Back Button -->
+    <button onclick="window.history.back()" class="fixed top-4 left-4 z-50 bg-gray-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </button>
+
+    <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 max-w-full md:max-w-7xl">
+        <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-2 sm:p-4 md:p-8">
+                <!-- Image Gallery -->
+                <div class="space-y-4 sm:space-y-6 relative">
+                    <!-- Main Image -->
+                    <div class="relative group flex-1">
+                        <img id="mainImage" src="https://vehicle-images.dealerinspire.com/f79a-18003960/SAL1Z9F98RA407195/8992aba6ae2010c1469e60432cb21f02.jpg" 
+                            class="w-full h-48 sm:h-72 md:h-[500px] object-cover rounded-xl transition-opacity duration-300">
+                    </div>
+
+                    <!-- Thumbnails Slider Container -->
+                    <div class="relative">
+                        <!-- Navigation Buttons -->
+                        <button id="prevBtn" 
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 
+                            bg-blue-400/80 hover:bg-blue-500/90 
+                            text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full 
+                            shadow-lg shadow-gray-800/30 
+                            border border-blue-300/50 
+                            flex items-center justify-center 
+                            transition-all -translate-x-2 sm:-translate-x-4 
+                            hover:-translate-x-3 sm:hover:-translate-x-5 hover:scale-110 text-xs sm:text-sm">
+                        <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <button id="nextBtn" 
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 
+                            bg-blue-400/80 hover:bg-blue-500/90 
+                            text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full 
+                            shadow-lg shadow-gray-800/30 
+                            border border-blue-300/50 
+                            flex items-center justify-center 
+                            transition-all translate-x-2 sm:translate-x-4 
+                            hover:translate-x-3 sm:hover:translate-x-5 hover:scale-110 text-xs sm:text-sm">
+                        <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <!-- Thumbnails -->
+                        <div id="thumbnailsContainer" class="flex space-x-4 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory" style="scrollbar-width: none;">
+                            <div id="thumbnailsWrapper" class="flex space-x-4 flex-nowrap">
+                                <img src="https://vehicle-images.dealerinspire.com/f79a-18003960/SAL1Z9F98RA407195/8992aba6ae2010c1469e60432cb21f02.jpg" data-active="true"
+                                    class="thumbnail w-24 h-24 flex-shrink-0 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all snap-start">
+                                
+                                <img src="https://vehicle-images.dealerinspire.com/5472-18003960/SAL1Z9F98RA407195/19336b75084f34966c5ef0e3a5a04a1d.jpg" 
+                                    class="thumbnail w-24 h-24 flex-shrink-0 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all snap-start">
+                                <img src="https://vehicle-images.dealerinspire.com/6f6f-18003960/SAL1Z9F98RA407195/77b9ff354d68dc19ee36f1e93651fda1.jpg" 
+                                    class="thumbnail w-24 h-24 flex-shrink-0 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all snap-start">
+                                <img src="https://vehicle-images.dealerinspire.com/fee1-18003960/SAL1Z9F98RA407195/3d402eb0d19e5eeaf29825bfa401dab3.jpg" 
+                                    class="thumbnail w-24 h-24 flex-shrink-0 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all snap-start">
+                                <img src="https://vehicle-images.dealerinspire.com/8275-18003960/SAL1Z9F98RA407195/17514bbdf8e13e5891e0dc4152be7022.jpg" 
+                                    class="thumbnail w-24 h-24 flex-shrink-0 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all snap-start">
+                                <img src="https://vehicle-images.dealerinspire.com/26a8-18003960/SAL1Z9F98RA407195/0f0df7de3866ca0541a1e9106cd0fcb1.jpg" 
+                                    class="thumbnail w-24 h-24 flex-shrink-0 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all snap-start">
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Details Section -->
+                <div class="space-y-8 relative">
+                    <!-- Title & Price -->
+                    <div class="border-b border-gray-700 pb-6">
+                        <h1 class="text-2xl md:text-4xl font-bold mb-2">Range Rover Sport 2024</h1>
+                        <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-gray-400 text-xs md:text-sm">
+                            <span class="bg-blue-800/30 text-blue-400 px-2 py-0.5 md:px-3 md:py-1 rounded-full">New</span>
+                            <span>•</span>
+                            <span>Land Rover</span>
+                            <span>•</span>
+                            <span>Range Rover Sport</span>
+                            <span>•</span>
+                            <span>2024</span>
+                        </div>
+                        <p class="text-xl md:text-3xl font-bold text-blue-400 mt-2 md:mt-4">$95,000</p>
+                    </div>
+
+                    <!-- Specifications Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm">
+                        <!-- First spec takes full row on all screen sizes -->
+                        <div class="flex justify-between items-center p-2 md:p-3 bg-gray-700/50 rounded-lg sm:col-span-2">
+                            <span class="text-gray-400">Transmission:</span>
+                            <span class="font-medium">8-Speed Automatic</span>
+                        </div>
+
+                        <!-- Remaining specs -->
+                        <div class="flex justify-between items-center p-2 md:p-3 bg-gray-700/50 rounded-lg">
+                            <span class="text-gray-400">Fuel Type:</span>
+                            <span class="font-medium">Gasoline</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 md:p-3 bg-gray-700/50 rounded-lg">
+                            <span class="text-gray-400">Color:</span>
+                            <span class="font-medium">Santorini Black</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 md:p-3 bg-gray-700/50 rounded-lg">
+                            <span class="text-gray-400">Mileage:</span>
+                            <span class="font-medium">0 km</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 md:p-3 bg-gray-700/50 rounded-lg">
+                            <span class="text-gray-400">Seats:</span>
+                            <span class="font-medium">5</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 md:p-3 bg-gray-700/50 rounded-lg">
+                            <span class="text-gray-400">Engine Capacity:</span>
+                            <span class="font-medium">2996 CC</span>
+                        </div>
+                    </div>
+
+                    <!-- Safety Features -->
+                    <div class="bg-gray-700/30 p-2 md:p-4 rounded-xl">
+                        <h3 class="text-base md:text-lg font-semibold mb-2 md:mb-3">Safety Features</h3>
+                        <div class="grid grid-cols-2 gap-2 md:gap-3">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-blue-400"></i>
+                                <span class="text-sm">Terrain Response 2</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-blue-400"></i>
+                                <span class="text-sm">Adaptive Dynamics</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-blue-400"></i>
+                                <span class="text-sm">Blind Spot Assist</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-blue-400"></i>
+                                <span class="text-sm">Lane Keep Assist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location & Contact -->
+                    <div class="space-y-2 md:space-y-4">
+                        <div class="flex items-center text-blue-400 text-sm md:text-base">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>6th October, Egypt</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 md:py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-900 transition-all text-sm md:text-base">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            Contact Seller
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description & Features -->
+            <div class="px-2 md:px-8 pb-4 md:pb-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                <div>
+                    <h2 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">Description</h2>
+                    <p class="text-gray-400 leading-relaxed text-sm md:text-base">
+                        The 2024 Range Rover Sport represents the perfect blend of luxury, performance, and off-road capability. This sophisticated SUV combines Land Rover's legendary all-terrain expertise with contemporary design and cutting-edge technology.
+                        Powered by a refined 3.0L turbocharged engine, the Range Rover Sport delivers impressive performance both on and off the road. The vehicle features Land Rover's innovative Terrain Response 2 system, which automatically adapts to various driving conditions, ensuring optimal performance in any environment.
+                        The interior showcases premium materials, advanced infotainment systems, and exceptional craftsmanship. With its distinctive design, superior comfort, and unmatched capability, the Range Rover Sport continues to set the standard for luxury SUVs.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">Key Features</h2>
+                    <ul class="space-y-2 md:space-y-3 text-gray-400 text-sm md:text-base">
+                        <li class="flex items-center">
+                            <i class="fas fa-bolt text-blue-400 mr-2"></i>
+                            <span><strong>Engine:</strong> 3.0L Turbocharged I6</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-bolt text-blue-400 mr-2"></i>
+                            <span><strong>Power:</strong> 395 horsepower</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-bolt text-blue-400 mr-2"></i>
+                            <span><strong>0-60 mph:</strong> 5.7 seconds</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-bolt text-blue-400 mr-2"></i>
+                            <span><strong>Wading Depth:</strong> 35.4 inches (900mm)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 border-t border-gray-700/30">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Brand Section -->
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <h2 class="text-white text-3xl font-bold tracking-tight">
+                                Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                            </h2>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Revolutionizing automotive commerce through blockchain-powered transactions and AI-driven valuation solutions.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-800 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group">
+                                <i class="fa-brands fa-facebook-f text-gray-300 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group">
+                                <i class="fa-brands fa-x-twitter text-gray-300 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group">
+                                <i class="fa-brands fa-instagram text-gray-300 group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group">
+                                <i class="fa-brands fa-linkedin-in text-gray-300 group-hover:text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="space-y-6">
+                        <h3 class="text-white font-semibold text-lg tracking-wide uppercase">Marketplace</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                                <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Premium Inventory
+                            </a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                                <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Sell Your Vehicle
+                            </a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                                <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Instant Valuation
+                            </a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                                <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Certified Pre-Owned
+                            </a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="space-y-6">
+                        <h3 class="text-white font-semibold text-lg tracking-wide uppercase">Resources</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                                <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                Help Center
+                            </a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="space-y-6">
+                        <h3 class="text-white font-semibold text-lg tracking-wide uppercase">Insights</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Subscribe to our newsletter for market trends, exclusive offers, and platform updates.
+                        </p>
+                        <form class="mt-2 space-y-3">
+                            <div>
+                                <input type="email" placeholder="Your professional email" 
+                                    class="w-full bg-gray-800/60 backdrop-blur-sm border border-gray-700/30 
+                                            rounded-lg px-4 py-3 text-gray-300 focus:outline-none 
+                                            focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
+                                            transition-all placeholder-gray-500">
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+                                    px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 
+                                    shadow-lg hover:shadow-blue-900/40 flex items-center justify-center space-x-2">
+                                <span>Subscribe</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
+                            <p class="text-xs text-gray-500">
+                                We respect your privacy. Unsubscribe at any time.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Copyright & Legal -->
+                <div class="mt-16 pt-8 border-t border-gray-800">
+                    <div class="container mx-auto px-4">
+                        <div class="flex flex-col md:flex-row justify-between items-center">
+                            <div class="text-sm text-gray-500 mb-4 md:mb-0">
+                                &copy; 2025 CarXchange Technologies. All rights reserved.
+                            </div>
+                            <div class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+                                <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a>
+                                <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors">Terms of Service</a>
+                                <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors">Cookie Policy</a>
+                                <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors">GDPR</a>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center md:text-left text-xs text-gray-600">
+                            CarXchange is a registered trademark of CarXchange Technologies Inc. Patent pending.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<script src="js/viewdetails.js"></script>
+</body>
+</html> 

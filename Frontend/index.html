@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarXChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="../images/iconpage.jpg">
+</head>
+<body class="font-['Inter'] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-x-hidden">
+    <div class="min-h-screen">
+
+        <!-- Start navbar -->
+        <div class="bg-white shadow-md w-full sticky top-0 z-50" data-aos="fade-down" data-aos-duration="900">
+            <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-gray-700/80 sticky top-0 z-50">
+                <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16 items-center">
+                        <!-- Logo -->
+                        <div class="text-xl font-bold text-gray-300" data-aos="fade-right" >
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </div>
+    
+                        <!-- Mobile menu button -->
+                        <div class="flex items-center md:hidden" data-aos="fade-left" >
+                            <button id="mobile-menu-button" class="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <!-- Navigation Desktop  -->
+                        <div class="hidden md:flex space-x-6" data-aos="fade-down" >
+                            <a href="./index.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                            </a>
+                            <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                            </a>
+                            <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                            </a>
+                            <a href="#AboutUs" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center hover:bg-gray-700/30">
+                                <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                            </a>
+                        </div>
+    
+                        <!-- Sign In Desktop -->
+                        <a href="./Login.html"
+                        class="hidden md:inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-md text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group"
+                        data-aos="zoom-in">
+                        <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        Sign In
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu  -->
+                <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-gray-800/95 backdrop-blur-sm">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="./index.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-home mr-2 text-sm text-blue-400"></i>Home
+                        </a>
+                        <a href="./buycar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-car mr-2 text-sm text-blue-400"></i>Buy
+                        </a>
+                        <a href="./sellcar.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-dollar-sign mr-2 text-sm text-blue-400"></i>Sell
+                        </a>
+                        <a href="#AboutUs" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">
+                            <i class="fas fa-info-circle mr-2 text-sm text-blue-400"></i>About
+                        </a>
+                        <a href="./Login.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300 group">
+                        <i class="fas fa-user mr-2 text-blue-400 transition-transform duration-300 "></i>
+                        Sign In
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--End navbar -->
+
+        <!-- Start Section 1 -->
+        <section class="pt-20 pb-40 min-h-screen flex items-center relative">
+            <div class="container mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="flex-1 lg:max-w-2xl space-y-8 text-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 mb-6 leading-tight" data-aos="fade-up">
+                            Discover Your 
+                            <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent" data-aos="zoom-in">
+                                Dream Ride
+                            </span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-400 max-w-xl" data-aos="fade-up" >
+                            Explore 50,000+ certified vehicles in our premium automotive marketplace
+                        </p>
+                    </div>
+    
+                      <!-- Buttons -->
+                      <div class="flex flex-row flex-nowrap gap-2 sm:gap-4 px-2 sm:px-0" data-aos="fade-up">
+                        <a  href="./buycar.html" class="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 
+                                    text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl font-semibold transition-all duration-300 
+                                    transform hover:scale-[1.02] shadow-lg hover:shadow-blue-800/40 
+                                    flex items-center gap-2 group flex-shrink-0 w-[calc(50%-4px)] sm:w-auto sm:min-w-[200px]
+                                    border border-blue-400/20 hover:border-blue-300/30
+                                    ring-2 ring-blue-500/10 hover:ring-blue-400/20"
+                            data-aos="zoom-in">
+                            <span class="whitespace-nowrap">Browse All Cars</span>
+                            <i class="fa-solid fa-car-side transition-transform duration-300 group-hover:translate-x-2 
+                                    text-orange-400 group-hover:text-orange-300"></i>
+                        </a>
+                    
+                        <a href="./sellcar.html" class="border-2 border-blue-400/60 hover:border-blue-300/80 
+                                    text-blue-200 hover:text-blue-100 px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl 
+                                    font-semibold transition-all duration-300 
+                                    transform hover:scale-[1.02] 
+                                    bg-gradient-to-br from-blue-900/10 to-blue-800/10 hover:from-blue-900/30 hover:to-blue-800/30 
+                                    flex items-center gap-2 group flex-shrink-0 w-[calc(50%-4px)] sm:w-auto sm:min-w-[200px]
+                                    shadow-sm hover:shadow-blue-800/30 
+                                    ring-1 ring-blue-500/20 hover:ring-blue-400/30"
+                            data-aos="zoom-in">
+                            <span class="whitespace-nowrap">Sell Your Car</span>
+                            <i class="fa-solid fa-handshake transition-transform duration-300 
+                                    group-hover:translate-x-2 text-orange-400/90 group-hover:text-orange-300"></i>
+                        </a>
+                    </div>
+    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 sm:flex flex-wrap gap-3 md:gap-6 justify-center lg:justify-start mt-8" data-aos="fade-up">
+                        <!-- Satisfied Customers -->
+                        <div class="flex items-center gap-2 bg-gray-800/30 backdrop-blur-sm px-4 py-2 rounded-xl 
+                                    border border-gray-700/50 hover:border-blue-400/30 transition-all duration-300
+                                    hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-900/20
+                                    text-sm min-w-[160px]" data-aos="fade-up">
+                            <div class="counter text-orange-400 font-bold text-xl md:text-3xl" data-target="25000">0</div>
+                            <div class="text-blue-200 font-medium">
+                                <span class="block text-blue-300/80 text-xs">Satisfied</span>
+                                Customers
+                            </div>
+                            <i class="fas fa-users text-blue-400/50 ml-1 text-lg"></i>
+                        </div>
+
+                        <!-- Trusted Partnerships -->
+                        <div class="flex items-center gap-2 bg-gray-800/30 backdrop-blur-sm px-4 py-2 rounded-xl 
+                                    border border-gray-700/50 hover:border-blue-400/30 transition-all duration-300
+                                    hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-900/20
+                                    text-sm min-w-[160px]" data-aos="fade-up">
+                            <div class="counter text-orange-400 font-bold text-xl md:text-3xl" data-target="50">0</div>
+                            <div class="text-blue-200 font-medium">
+                                <span class="block text-blue-300/80 text-xs">Trusted</span>
+                                Partnerships
+                            </div>
+                            <i class="fas fa-handshake text-blue-400/50 ml-1 text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="flex-1 max-w-3xl relative mt-12 lg:mt-0" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform 
+                                duration-500 group isolate">
+                        <!-- Video -->
+                        <video 
+                            id="heroVideo"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="auto"
+                            class="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-[filter] duration-500"
+                            onended="this.play()"
+                            data-aos="zoom-in" 
+                        >
+                            <source src="video/CarXChange.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                
+                        <!-- Professional Overlay Effects -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-radial-gradient from-transparent to-black/40"></div>
+                
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Decorative Elements -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute -top-20 -right-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl" data-aos="fade-in"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" data-aos="fade-in"></div>
+            </div>
+        </section>
+        <!-- End Section 1 -->
+
+
+        <!-- Start Marketplace Section -->
+        <section class="relative py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" data-aos="fade-in"></div>
+                <div class="absolute bottom-0 right-0 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000" data-aos="fade-in"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-20 space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="inline-flex items-center gap-3 bg-gray-800/50 px-6 py-2 rounded-full border border-gray-700/50 mb-8" data-aos="zoom-in">
+                        <span class="text-blue-400">✦</span>
+                        <span class="text-sm uppercase tracking-widest text-gray-300 font-semibold">Smart Trading Platform</span>
+                        <span class="text-green-400">✦</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight" data-aos="fade-up">
+                        Modern Vehicle Exchange
+                        <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Perfected</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up">
+                        Buy or sell your car easily and safely through our smart platform.<br class="hidden lg:block">
+                        Direct communication, trusted process, and a smooth experience.
+                    </p>
+                </div>
+
+                <!-- Dual Process Flow -->
+                <div class="grid lg:grid-cols-2 gap-8 xl:gap-12 mb-24">
+                    <!-- Seller's Journey -->
+                    <div class="group bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 xl:p-10 shadow-2xl 
+                        border border-gray-700/50 hover:border-blue-400/30 transition-all duration-500
+                        hover:-translate-y-2 relative overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                        <div class="flex items-center gap-5 mb-8 relative" data-aos="fade-up">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl 
+                                flex items-center justify-center shadow-lg" data-aos="zoom-in">
+                                <i class="fa-solid fa-rocket text-2xl text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl xl:text-3xl font-bold text-white" data-aos="fade-up">Seller's Journey</h3>
+                                <p class="text-gray-400 mt-1" data-aos="fade-up">Simple Steps to Sell Your Car</p>
+                            </div>
+                        </div>
+
+                        <ol class="space-y-8 relative">
+                            <div class="absolute left-4 top-8 bottom-8 w-0.5 bg-gray-700/50"></div>
+
+                            <li class="flex gap-5" data-aos="fade-up">
+                                <div class="w-10 h-10 flex-shrink-0 bg-gradient-to-br from-blue-600/20 to-blue-400/20 
+                                    rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-blue-400 font-bold text-lg">1</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-lg font-semibold text-white">Create a Listing</h4>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        Upload photos, add car details, and get your listing live in minutes.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="flex gap-5" data-aos="fade-up">
+                                <div class="w-10 h-10 flex-shrink-0 bg-gradient-to-br from-blue-600/20 to-blue-400/20 
+                                    rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-blue-400 font-bold text-lg">2</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-lg font-semibold text-white">Chat with Buyers</h4>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        Receive direct messages and negotiate easily with interested buyers.
+                                    </p>
+                                </div>
+                            </li>
+
+                                <li class="flex gap-5" data-aos="fade-up">
+                                <div class="w-10 h-10 flex-shrink-0 bg-gradient-to-br from-blue-600/20 to-blue-400/20 
+                                    rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-blue-400 font-bold text-lg">3</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-lg font-semibold text-white">Secure Payment</h4>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        Once the deal is confirmed, you'll receive your money safely.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Buyer's Journey -->
+                    <div class="group bg-gray-800/30 backdrop-blur-sm rounded-3xl p-8 xl:p-10 shadow-2xl 
+                        border border-gray-700/50 hover:border-green-400/30 transition-all duration-500
+                        hover:-translate-y-2 relative overflow-hidden" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-500/5 to-transparent 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                        <div class="flex items-center gap-5 mb-8 relative" data-aos="fade-up">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-400 rounded-xl 
+                                flex items-center justify-center shadow-lg" data-aos="zoom-in">
+                                <i class="fa-solid fa-shield-heart text-2xl text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl xl:text-3xl font-bold text-white" data-aos="fade-up">Buyer's Journey</h3>
+                                <p class="text-gray-400 mt-1" data-aos="fade-up">Easy and Safe Car Buying</p>
+                            </div>
+                        </div>
+
+                        <ol class="space-y-8 relative">
+                            <div class="absolute left-4 top-8 bottom-8 w-0.5 bg-gray-700/50"></div>
+
+                            <li class="flex gap-5" data-aos="fade-up">
+                                <div class="w-10 h-10 flex-shrink-0 bg-gradient-to-br from-green-600/20 to-green-400/20 
+                                    rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-green-400 font-bold text-lg">1</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-lg font-semibold text-white">Browse Listings</h4>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        Find the right car by filtering by price, model, and location.
+                                    </p>
+                                </div>
+                            </li>
+
+                                        <li class="flex gap-5" data-aos="fade-up">
+                                <div class="w-10 h-10 flex-shrink-0 bg-gradient-to-br from-green-600/20 to-green-400/20 
+                                    rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-green-400 font-bold text-lg">2</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-lg font-semibold text-white">Connect with Sellers</h4>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        Ask questions, request more info, or arrange to see the car.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="flex gap-5" data-aos="fade-up">
+                                <div class="w-10 h-10 flex-shrink-0 bg-gradient-to-br from-green-600/20 to-green-400/20 
+                                    rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-green-400 font-bold text-lg">3</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-lg font-semibold text-white">Complete the Purchase</h4>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        Finalize the deal and pick up your new car with full confidence.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Marketplace Section -->
+
+    </div>
+
+    <!-- Smart Trading Platform -->
+        <section class="py-16 w-full bg-gradient-to-br from-gray-900/50 via-blue-900/30 to-gray-900/50" data-aos="fade-up" data-aos-duration="1000">
+            <div class="px-6 md:px-12">
+                <!-- Header -->
+                <div class="mb-8 flex flex-col md:flex-row items-center justify-between gap-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-center md:text-left" data-aos="fade-right">
+                        <h2 class="text-3xl font-bold text-gray-100 mb-2">Featured Vehicles</h2>
+                        <p class="text-lg text-gray-400">Curated selection of premium automobiles</p>
+                    </div>
+
+                    <!-- Flex container for larger screens -->
+                    <div class="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto" data-aos="fade-left">
+                        
+
+                        <!-- View All Listings link -->
+                        <a href="./buycar.html" class="relative flex items-center gap-2 text-orange-400 font-semibold hover:text-orange-300 transition duration-300 group" data-aos="zoom-in">
+                            View All Listings
+                            <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                            <span class="absolute left-0 bottom-0 w-0 h-px bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Car Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Car 1 -->
+                    <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+                    border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+                    hover:shadow-2xl hover:shadow-orange-900/20" data-aos="fade-up" data-aos-duration="800">
+
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                        group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+                    <!-- Price Badge -->
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                        px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                        border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300"
+                        data-aos="zoom-in">
+                    <i class="fa-solid fa-dollar-sign mr-1"></i>575,000
+                    </div>
+
+                    <!-- Image Container -->
+                    <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in">
+                    <img src="https://www.contactcars.com/_next/image?url=https%3A%2F%2Fcontactcars.fra1.cdn.digitaloceanspaces.com%2Fcontactcars-production%2FImages%2FSmall%2FUsedCars%2Fe02b3f40-fa89-4fad-8039-cc79f60904c6.jpeg&w=3840&q=75" alt="Porsche 911 GT3 2025" 
+                            class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                            group-hover:scale-105">
+                    </div>
+
+                    <!-- Details Container -->
+                        <div class="p-4 sm:p-6 relative z-20" data-aos="fade-up">
+                    <!-- Title -->
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                            group-hover:text-orange-400 transition-colors duration-300">
+                            Porsche 911 GT3 2025
+                    </h3>
+                    
+                    <!-- Specifications Grid -->
+                    <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]">
+                        <!-- Condition -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                            </div>
+                        </div>
+
+                        <!-- Color -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-500 border-2 border-gray-300 
+                                    shadow-md mb-2"></div>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Gray</span>
+                            </div>
+                        </div>
+
+                        <!-- Transmission -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <a href="viewdetails-Porsche 911 GT3 2025.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                            bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                            hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                            shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base"
+                            data-aos="zoom-in">
+                        <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                        <span class="font-semibold">Full Specs</span>
+                        <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                                transition-transform duration-300"></i>
+                    </a>
+                    </div>
+                    </div>
+
+                    <!-- Car 2 - BMW M4 Competition -->
+                    <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+                    border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+                    hover:shadow-2xl hover:shadow-orange-900/20" data-aos="fade-up" data-aos-duration="800">
+
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                        group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+                    <!-- Price Badge -->
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                        px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                        border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300"
+                        data-aos="zoom-in">
+                    <i class="fa-solid fa-dollar-sign mr-1"></i>89,900
+                    </div>
+
+                    <!-- Image Container -->
+                    <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in">
+                    <img src="https://www.mclarenscottsdale.com/imagetag/1289/main/l/Used-2024-BMW-M4-Competition-xDrive-1727128219.jpg" alt="BMW M4 Competition 2024" 
+                            class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                            group-hover:scale-105">
+                    </div>
+
+                    <!-- Details Container -->
+                    <div class="p-4 sm:p-6 relative z-20" data-aos="fade-up">
+                    <!-- Title -->
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                            group-hover:text-orange-400 transition-colors duration-300">
+                            BMW M4 Competition 2024
+                    </h3>
+                    
+                    <!-- Specifications Grid -->
+                    <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]">
+                        <!-- Condition -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Used</span>
+                            </div>
+                        </div>
+
+                        <!-- Color -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-green-600 border-2 border-green-300 
+                                    shadow-md mb-2"></div>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Green</span>
+                            </div>
+                        </div>
+
+                        <!-- Transmission -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <a href="viewdetails-BMW M4 Competition 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                            bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                            hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                            shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base"
+                            data-aos="zoom-in">
+                        <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                        <span class="font-semibold">Full Specs</span>
+                        <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                                transition-transform duration-300"></i>
+                    </a>
+                    </div>
+                    </div>
+
+                    <!-- Car 3 - Mercedes-Benz S-Class -->
+                    <div class="relative group rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-sm 
+                    border border-gray-700/60 hover:border-orange-400/30 transition-all duration-500 
+                    hover:shadow-2xl hover:shadow-orange-900/20" data-aos="fade-up" data-aos-duration="800">
+
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 
+                        group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+
+                    <!-- Price Badge -->
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white 
+                        px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-xl z-20 
+                        border border-orange-400/30 transform group-hover:-translate-y-1 transition-transform duration-300"
+                        data-aos="zoom-in">
+                    <i class="fa-solid fa-dollar-sign mr-1"></i>125,000
+                    </div>
+
+                    <!-- Image Container -->
+                    <div class="relative h-48 sm:h-60 lg:h-72 overflow-hidden" data-aos="zoom-in">
+                    <img src="https://www.edmunds.com/assets/m/cs/blt191df793f61263b7/674f4d8e0491cfc963ef2a82/2024-mercedes-amg-s63-e-performance-f34.jpg" alt="Mercedes-Benz S-Class 2024" 
+                            class="w-full h-full object-cover transition-transform duration-500 ease-out-expo 
+                            group-hover:scale-105">
+                    </div>
+
+                    <!-- Details Container -->
+                    <div class="p-4 sm:p-6 relative z-20" data-aos="fade-up">
+                    <!-- Title -->
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 truncate 
+                            group-hover:text-orange-400 transition-colors duration-300">
+                            Mercedes-Benz S-Class 2024
+                    </h3>
+                    
+                    <!-- Specifications Grid -->
+                    <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 min-w-[300px]">
+                        <!-- Condition -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <i class="fa-solid fa-clipboard-check text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Condition</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">New</span>
+                            </div>
+                        </div>
+
+                        <!-- Color -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-black border-2 border-gray-300 
+                                    shadow-md mb-2"></div>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Color</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Black</span>
+                            </div>
+                        </div>
+
+                        <!-- Transmission -->
+                        <div class="spec-item p-2 sm:p-3 rounded-xl bg-gray-700/40 hover:bg-orange-900/20 
+                            transition-all duration-300 border border-gray-600/50 flex items-center 
+                            justify-center flex-col aspect-square min-h-[100px]" data-aos="fade-up">
+                            <div class="flex flex-col items-center justify-center flex-1">
+                                <i class="fa-solid fa-gears text-orange-400 text-xl sm:text-2xl mb-1 sm:mb-2"></i>
+                                <span class="text-xs font-semibold text-gray-400 uppercase text-center">Transmission</span>
+                                <span class="text-sm font-bold text-gray-200 mt-1 text-center">Automatic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <a href="viewdetails-Mercedes-Benz S-Class 2024.html" class="flex items-center justify-center space-x-2 sm:space-x-3 w-full 
+                            bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl 
+                            hover:from-orange-700 hover:to-orange-600 transition-all duration-300 
+                            shadow-lg hover:shadow-xl border border-orange-400/30 text-sm sm:text-base"
+                                data-aos="zoom-in">
+                        <i class="fa-solid fa-circle-info text-sm sm:text-lg"></i>
+                        <span class="font-semibold">Full Specs</span>
+                        <i class="fa-solid fa-arrow-right ml-1 sm:ml-2 transform group-hover:translate-x-1 
+                                transition-transform duration-300"></i>
+                    </a>
+                    </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section>
+    <!-- End Smart Trading Platform -->
+
+
+        <!-- Start About Us Section -->
+            <section id="AboutUs" class="relative py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Decorative elements -->
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute top-0 left-0 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" data-aos="fade-in"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" data-aos="fade-in"></div>
+                    <div class="absolute bottom-0 left-1/2 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000" data-aos="fade-in"></div>
+                </div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="800">
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-blue-400 rounded-full bg-blue-900/50 mb-4" data-aos="zoom-in">
+                            WHO WE ARE
+                        </span>
+                        <h2 class="text-4xl md:text-5xl font-bold tracking-tight" data-aos="fade-up">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">About</span> 
+                            <span class="text-white">Car</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">X</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">Change</span>
+                        </h2>
+                        
+                            <div class="mt-6 max-w-3xl mx-auto" data-aos="fade-up">
+                            <p class="text-xl md:text-2xl font-medium text-gray-300 leading-relaxed">
+                                Empowering <span class="text-blue-300 font-semibold">seamless connections</span> between buyers and sellers in the automotive marketplace
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="mb-16 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="space-y-8">
+                                <p class="text-lg md:text-xl text-gray-300 leading-relaxed" data-aos="fade-up">
+                                    At <strong class="text-white">Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span></strong>, we're revolutionizing the way people buy and sell vehicles. Our platform combines cutting-edge technology with deep automotive expertise to create a marketplace that's efficient, transparent, and trustworthy.
+                                </p>
+                                <p class="text-lg md:text-xl text-gray-300 leading-relaxed" data-aos="fade-up">
+                                    We've eliminated the traditional pain points of car transactions, offering a streamlined process that saves time, reduces stress, and ensures fair deals for both buyers and sellers.
+                                </p>
+                                
+                                <div class="mt-8 grid grid-cols-2 gap-4" data-aos="fade-up">
+                                    <div class="flex items-center" data-aos="fade-up">
+                                        <svg class="h-6 w-6 text-orange-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span class="text-gray-300">No hidden fees</span>
+                                    </div>
+                                    <div class="flex items-center" data-aos="fade-up">
+                                        <svg class="h-6 w-6 text-orange-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span class="text-gray-300">Verified listings</span>
+                                    </div>
+                                        <div class="flex items-center" data-aos="fade-up">
+                                        <svg class="h-6 w-6 text-orange-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span class="text-gray-300">Instant valuation</span>
+                                    </div>
+                                    <div class="flex items-center" data-aos="fade-up">
+                                        <svg class="h-6 w-6 text-orange-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span class="text-gray-300">24/7 support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative lg:mt-0" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Core Values Cards -->
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 
+                                    hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 hover:-translate-y-2"
+                                    data-aos="zoom-in" data-aos-duration="800">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                                            <div class="flex-shrink-0 bg-gradient-to-br from-blue-600 to-blue-800 p-3 rounded-xl" data-aos="zoom-in">
+                                                <i class="fa-solid fa-bolt-lightning text-2xl text-orange-400"></i>
+                                            </div>
+                                            <h3 class="text-xl font-bold text-blue-400">Lightning Fast</h3>
+                                        </div>
+                                        <p class="text-gray-300 text-sm flex-grow" data-aos="fade-up">Complete transactions in as little as 24 hours with our streamlined process.</p>
+                                        <div class="mt-4 pt-4 border-t border-gray-700/50" data-aos="fade-up">
+                                            <span class="text-xs text-blue-400 font-medium">EFFICIENCY</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 
+                                    hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 hover:-translate-y-2"
+                                    data-aos="zoom-in" data-aos-duration="800">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                                            <div class="flex-shrink-0 bg-gradient-to-br from-blue-600 to-blue-800 p-3 rounded-xl" data-aos="zoom-in">
+                                                <i class="fa-solid fa-shield-halved text-2xl text-orange-400"></i>
+                                            </div>
+                                            <h3 class="text-xl font-bold text-blue-400">Bank-Level Security</h3>
+                                        </div>
+                                        <p class="text-gray-300 text-sm flex-grow" data-aos="fade-up">256-bit encryption and fraud protection for all transactions and personal data.</p>
+                                        <div class="mt-4 pt-4 border-t border-gray-700/50" data-aos="fade-up">
+                                            <span class="text-xs text-blue-400 font-medium">SAFETY</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 
+                                    hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 hover:-translate-y-2"
+                                    data-aos="zoom-in" data-aos-duration="800">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                                            <div class="flex-shrink-0 bg-gradient-to-br from-blue-600 to-blue-800 p-3 rounded-xl" data-aos="zoom-in" >
+                                                <i class="fa-solid fa-chart-line text-2xl text-orange-400"></i>
+                                            </div>
+                                            <h3 class="text-xl font-bold text-blue-400">Smart Pricing</h3>
+                                        </div>
+                                        <p class="text-gray-300 text-sm flex-grow" data-aos="fade-up">AI-powered market analysis ensures you always get the best possible deal.</p>
+                                        <div class="mt-4 pt-4 border-t border-gray-700/50" data-aos="fade-up">
+                                            <span class="text-xs text-blue-400 font-medium">INTELLIGENCE</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 
+                                    hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 hover:-translate-y-2"
+                                    data-aos="zoom-in" data-aos-duration="800">
+                                    <div class="flex flex-col h-full">
+                                        <div class="flex items-center gap-4 mb-4" data-aos="fade-up">
+                                            <div class="flex-shrink-0 bg-gradient-to-br from-blue-600 to-blue-800 p-3 rounded-xl" data-aos="zoom-in">
+                                                <i class="fa-solid fa-handshake-angle text-2xl text-orange-400"></i>
+                                            </div>
+                                            <h3 class="text-xl font-bold text-blue-400">Dedicated Support</h3>
+                                        </div>
+                                        <p class="text-gray-300 text-sm flex-grow" data-aos="fade-up">Our automotive experts guide you through every step of the process.</p>
+                                        <div class="mt-4 pt-4 border-t border-gray-700/50" data-aos="fade-up">
+                                            <span class="text-xs text-blue-400 font-medium">SERVICE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            <!-- End About Us Section -->
+
+            
+
+
+        <!-- Start Footer -->
+        <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 border-t border-gray-700/30" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand Section -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex items-center" data-aos="fade-right">
+                        <h2 class="text-white text-3xl font-bold tracking-tight">
+                            Car<span class="text-blue-400">X</span><span class="text-orange-400">Change</span>
+                        </h2>
+                        
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up">
+                        Revolutionizing automotive commerce through blockchain-powered transactions and AI-driven valuation solutions.
+                    </p>
+                    <div class="flex space-x-4" data-aos="fade-up">
+                        <a href="#" class="bg-gray-800 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-facebook-f text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-x-twitter text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-instagram text-gray-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 group" data-aos="zoom-in">
+                            <i class="fa-brands fa-linkedin-in text-gray-300 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up">Marketplace</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up"><a href="premium-inventory.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Premium Inventory
+                        </a></li>
+                        <li data-aos="fade-up"><a href="sellcar.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Sell Your Vehicle
+                        </a></li>
+                        <li data-aos="fade-up"><a href="instant-valuation.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Instant Valuation
+                        </a></li>
+                        <li data-aos="fade-up"><a href="certified-pre-owned.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Certified Pre-Owned
+                        </a></li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up">Resources</h3>
+                    <ul class="space-y-3">
+                        <li data-aos="fade-up"><a href="help-center.html" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center group">
+                            <span class="w-1 h-1 bg-blue-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            Help Center
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-white font-semibold text-lg tracking-wide uppercase" data-aos="fade-up">Insights</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-aos="fade-up">
+                        Subscribe to our newsletter for market trends, exclusive offers, and platform updates.
+                    </p>
+                    <form class="mt-2 space-y-3" data-aos="fade-up">
+                        <div data-aos="zoom-in">
+                            <input type="email" placeholder="Your professional email" 
+                                class="w-full bg-gray-800/60 backdrop-blur-sm border border-gray-700/30 
+                                        rounded-lg px-4 py-3 text-gray-300 focus:outline-none 
+                                        focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
+                                        transition-all placeholder-gray-500">
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+                                px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 
+                                shadow-lg hover:shadow-blue-900/40 flex items-center justify-center space-x-2"
+                                data-aos="zoom-in">
+                            <span>Subscribe</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                        <p class="text-xs text-gray-500" data-aos="fade-up">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="mt-16 pt-8 border-t border-gray-800" data-aos="fade-up" data-aos-duration="800">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-sm text-gray-500 mb-4 md:mb-0" data-aos="fade-up">
+                            &copy; 2025 CarXchange Technologies. All rights reserved.
+                        </div>
+                        <div class="flex flex-wrap justify-center space-x-4 md:space-x-6" data-aos="fade-up">
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">Privacy Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">Terms of Service</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">Cookie Policy</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-400 text-sm transition-colors" data-aos="fade-up">GDPR</a>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center md:text-left text-xs text-gray-600" data-aos="fade-up">
+                        CarXchange is a registered trademark of CarXchange Technologies Inc. Patent pending.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+  easing: 'ease-out-cubic',
+  once: true,
+  mirror: false,
+  anchorPlacement: 'top-bottom',
+  offset: 0,          
+  delay: 0,           
+  startEvent: 'DOMContentLoaded'
+    });
+</script>
+<script src="js/index.js"></script>
+<script src="js/navbar.js"></script>
+</body>

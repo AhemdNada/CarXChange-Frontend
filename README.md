@@ -286,7 +286,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ##  Quick Links
 
-- [Live Demo](#) *(Coming Soon)*
+- [Live Demo](https://ahemdnada.github.io/CarXChange-Frontend/Frontend/) 
 - [Documentation](#) *(Coming Soon)*
 - [API Reference](#) *(Coming Soon)*
 - [Support](#) *(Coming Soon)*
